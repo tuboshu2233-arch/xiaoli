@@ -1,0 +1,50 @@
+[
+  {
+    "case": "ppt-mobile",
+    "slide": 24,
+    "pptEntry": "ppt/media/image23.webp",
+    "asset": "interaction-library/assets/ppt/image23.webp",
+    "sha256": "c7014a673dd75574598475ec22acfe6c7268f4e6e922076ce7b69b60dab40f31",
+    "size": [
+      582,
+      1036
+    ],
+    "frames": 34
+  },
+  {
+    "case": "ppt-carousel",
+    "slide": 24,
+    "pptEntry": "ppt/media/image24.webp",
+    "asset": "interaction-library/assets/ppt/image24.webp",
+    "sha256": "30bfaa3a1f27d7e105aa93745e3c2b1ff881dbc1bc1a16e284fc284bc54a3ae1",
+    "size": [
+      744,
+      447
+    ],
+    "frames": 13
+  },
+  {
+    "case": "ppt-cover",
+    "slide": 25,
+    "pptEntry": "ppt/media/image25.webp",
+    "asset": "interaction-library/assets/ppt/image25.webp",
+    "sha256": "00063cccb5b82b35a3f66dfcb9470a8b7035b58c18c013a959420f926f1bd28b",
+    "size": [
+      500,
+      216
+    ],
+    "frames": 97
+  },
+  {
+    "case": "ppt-overlap",
+    "slide": 26,
+    "pptEntry": "ppt/media/image26.webp",
+    "asset": "interaction-library/assets/ppt/image26.webp",
+    "sha256": "17821a7a89bf4e47ea56b45ebf4c3c46597bea95d0ee6de5c27f895c727057e4",
+    "size": [
+      640,
+      320
+    ],
+    "frames": 181
+  }
+]

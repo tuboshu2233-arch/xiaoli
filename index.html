@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="按头像、轮播、列表、数值、饼图等表现形式分类的个人交互动效收藏。">
+  <title>拾动 · 交互动效收藏</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=27">
+  <script src="app.js?v=42" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="header-left"><button class="icon-button mobile-menu" id="mobile-menu" aria-label="展开分类" aria-expanded="false" aria-controls="sidebar"><i data-icon="menu"></i></button><a class="brand" href="./"><img class="brand-logo" src="assets/favicon.svg" alt="">拾动<span>交互动效收藏</span></a></div>
+    <nav class="top-actions" aria-label="收藏操作"><a href="https://huaban.com/boards/102792769" target="_blank" rel="noopener noreferrer">花瓣画板 ↗</a><button id="favorites-only" aria-pressed="false"><i data-icon="heart"></i><span>仅看喜欢</span></button><button class="add-button" id="add-open"><i data-icon="plus"></i>添加收藏</button></nav>
+  </header>
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <label class="search-box"><i data-icon="search"></i><input id="search" type="search" placeholder="搜索分类或动效…" aria-label="搜索分类或动效"></label>
+      <nav id="category-tree" aria-label="动效分类"></nav>
+      <div class="side-bottom"><span id="collection-count">24 个案例</span><span>本地收藏</span></div>
+    </aside>
+    <main>
+      <div class="breadcrumb" id="breadcrumb-title">图表</div>
+      <h1 id="page-title">饼图</h1>
+      <p class="page-description" id="page-description">展示占比与构成关系，收集饼图和环形图的常见动效。</p>
+      <section class="example-section" id="example-section" aria-label="案例切换"><div class="section-heading"><h2>案例</h2><span id="example-count"></span></div><div id="example-tabs" class="example-tabs" role="group" aria-label="选择案例"></div></section>
+      <div id="detail-content"></div>
+      <section class="empty-state" id="empty-state" hidden><h2>没有匹配的案例</h2><p>试试其他关键词，或查看全部收藏。</p><button class="secondary-button" id="empty-reset">清除筛选</button></section>
+      <footer class="footer"><span>拾动 · 交互动效收藏</span><span>按 / 搜索</span></footer>
+    </main>
+  </div>
+  <dialog id="add-dialog" class="add-dialog" aria-labelledby="add-title"><form id="add-form"><div class="dialog-heading"><div><span class="eyebrow">SAVE AN INSPIRATION</span><h2 id="add-title">收藏一个好交互</h2></div><button type="button" class="icon-button" id="add-close" aria-label="关闭添加收藏"><i data-icon="close"></i></button></div><p class="form-intro">按一级分组选择表现形式，保存参考链接。</p><label class="form-field">收藏名称<input name="title" required maxlength="60" placeholder="例如：顺滑的卡片轮播"></label><label class="form-field">来源链接<input name="url" type="url" required placeholder="https://…"></label><label class="form-field">表现形式<select name="category" id="add-category"></select></label><label class="form-field">灵感笔记 <span>选填</span><textarea name="note" rows="3" maxlength="500" placeholder="哪里打动了你？适合用在哪个设计里？"></textarea></label><p class="storage-note"><i data-icon="lock"></i>收藏保存在当前浏览器，适合先整理本地灵感。</p><div class="form-footer"><button type="button" class="secondary-button" id="add-cancel">取消</button><button type="submit" class="add-button"><i data-icon="plus"></i>保存收藏</button></div></form></dialog>
+  <div class="toast" id="toast" role="status"></div>
+</body>
+</html>

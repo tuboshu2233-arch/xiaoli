@@ -1,0 +1,10 @@
+{
+  "note": "Configured picsum.photos URLs returned HTTP 522. Using cached Unsplash sample photographs for reliable local previews. Component settings unchanged.",
+  "images": {
+    "a": "photo-1464822759023-fed622ff2c3b",
+    "b": "photo-1472396961693-142e6e269027",
+    "c": "photo-1441974231531-c6227db76b6e",
+    "d": "photo-1500534623283-312aade485b7",
+    "e": "photo-1470770841072-f978cf4d019e"
+  }
+}

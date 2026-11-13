@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>榜单列表 · 表格滚动</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <main class="stage">
+      <section class="board">
+        <header class="board-head">
+          <div class="medals"><span class="m1">1</span><span class="m2">2</span><span class="m3">3</span></div>
+          <h1>阅读量排行榜</h1>
+          <span class="range">2021年11月01日 - 2021年11月30日</span>
+        </header>
+        <div class="table-wrap">
+          <div class="thead"><span>排名</span><span>博主</span><span>阅读量</span><span>点赞数</span><span>评论数</span><span>总分值</span></div>
+          <div class="viewport" id="viewport"><div class="rows" id="rows"></div></div>
+        </div>
+        <p class="note">*数据仅供参考</p>
+      </section>
+      <p class="hint">榜单自动向上滚动 · 悬停暂停 · 点击行查看高亮</p>
+    </main>
+    <script src="src/demo.js"></script>
+  </body>
+</html>

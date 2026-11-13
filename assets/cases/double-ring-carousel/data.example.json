@@ -1,0 +1,26 @@
+[
+  {
+    "name": "专职网格员",
+    "value": 331,
+    "colors": ["#bd4c00", "#ffb521"],
+    "label": "#a7753e"
+  },
+  {
+    "name": "兼职网格员",
+    "value": 87,
+    "colors": ["#12bdc9", "#23efed"],
+    "label": "#32c8d1"
+  },
+  {
+    "name": "司法社工",
+    "value": 53,
+    "colors": ["#2750d9", "#3b70ff"],
+    "label": "#4664c1"
+  },
+  {
+    "name": "心理咨询师",
+    "value": 13,
+    "colors": ["#7bcdf5", "#bcecff"],
+    "label": "#7bc8e8"
+  }
+]

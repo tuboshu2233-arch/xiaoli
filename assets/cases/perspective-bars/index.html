@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>双系列立体柱状图</title>
+  <link rel="stylesheet" href="../perspective-area/chart.css?v=2">
+  <script src="../perspective-area/scene.js?v=6" defer></script>
+  <script src="../perspective-area/chart.js?v=4" defer></script>
+</head>
+<body data-chart="bar">
+  <main class="chart-panel">
+    <header class="chart-header">
+      <div class="heading"><h1>双系列柱状趋势</h1><span class="demo-tag">示例数据</span></div>
+      <div class="chart-actions">
+        <button id="tour" type="button" aria-pressed="false">自动巡览</button>
+        <button id="refresh" type="button">更新数据</button>
+        <button id="reset" type="button">重置视角</button>
+      </div>
+    </header>
+    <section class="plot" id="plot" aria-label="趋势图">
+      <svg id="chart" tabindex="0" role="img" aria-label="可交互立体柱状图。悬停查看数值，拖动调整视角，点击锁定日期；也可用左右方向键切换日期，Escape 取消锁定。" aria-describedby="chart-help"></svg>
+      <div id="tooltip" class="tooltip" role="tooltip" hidden>
+        <div class="tooltip-heading"><strong id="tooltip-date"></strong><span id="pin-indicator" hidden>已锁定</span></div>
+        <div id="tooltip-values"></div>
+      </div>
+      <span class="drag-hint" id="drag-hint">拖动调整视角</span>
+    </section>
+    <footer class="chart-footer">
+      <div class="legend" aria-label="选择显示的系列">
+        <button type="button" data-series="0" aria-pressed="true"><span class="swatch blue"></span>系列一</button>
+        <button type="button" data-series="1" aria-pressed="true"><span class="swatch green"></span>系列二</button>
+      </div>
+      <p id="chart-help">悬停查看 · 点击锁定 · 拖动旋转</p>
+    </footer>
+    <div class="sr-only" id="announcement" role="status" aria-live="polite"></div>
+    <details class="accessible-data"><summary>查看数据表</summary><table><caption>双系列柱状趋势，单位：个</caption><thead><tr><th scope="col">日期</th><th scope="col">系列一</th><th scope="col">系列二</th></tr></thead><tbody id="data-rows"></tbody></table></details>
+  </main>
+</body>
+</html>

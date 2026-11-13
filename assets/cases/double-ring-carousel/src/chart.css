@@ -1,0 +1,173 @@
+#double-ring-carousel {
+  max-width: 440px;
+  margin: 0 auto;
+  background: #031020;
+  color: #d9e8f3;
+  padding: 20px 22px 17px;
+  font-family:
+    system-ui,
+    -apple-system,
+    "PingFang SC",
+    sans-serif;
+}
+#double-ring-carousel * {
+  box-sizing: border-box;
+}
+#double-ring-carousel .dc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+#double-ring-carousel .dc-demo {
+  display: block;
+  color: #708aa0;
+  font-size: 11px;
+}
+#double-ring-carousel .dc-play {
+  border: 1px solid #193345;
+  background: #071b2c;
+  color: #a8c1d5;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+#double-ring-carousel .dc-figure {
+  position: relative;
+  max-width: 350px;
+  margin: 12px auto 0;
+}
+#double-ring-carousel .dc-chart {
+  width: 100%;
+  display: block;
+  overflow: visible;
+}
+#double-ring-carousel .dc-chart text {
+  font-family: inherit;
+  font-size: 12px;
+  fill: #9bb1c3;
+  pointer-events: none;
+}
+#double-ring-carousel .dc-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  pointer-events: none;
+  transform: translateY(-1px);
+}
+#double-ring-carousel .dc-name {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #90a7bb;
+}
+#double-ring-carousel .dc-number {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1.4;
+  font-variant-numeric: tabular-nums;
+  color: #e2edf4;
+}
+#double-ring-carousel .dc-percent {
+  color: #14a9ff;
+  font-size: 15px;
+  line-height: 1.4;
+  font-variant-numeric: tabular-nums;
+}
+#double-ring-carousel .dc-legend {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px 12px;
+  margin-top: 16px;
+}
+#double-ring-carousel .dc-legend button {
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1.5;
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  justify-content: flex-start;
+  white-space: nowrap;
+  border: 0;
+  background: transparent;
+  color: #adc2d1;
+  padding: 5px 0;
+  cursor: pointer;
+  text-align: left;
+}
+#double-ring-carousel .dc-legend button[aria-pressed="true"] {
+  color: #edf7ff;
+}
+#double-ring-carousel .dc-swatch {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+}
+#double-ring-carousel .dc-legend-value {
+  font-variant-numeric: tabular-nums;
+  color: #18b1ff;
+  margin-left: 1px;
+}
+#double-ring-carousel .dc-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  color: #6f8ba1;
+  font-size: 11px;
+  line-height: 1.5;
+  margin-top: 16px;
+}
+#double-ring-carousel .dc-announcement {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#double-ring-carousel button:focus-visible {
+  outline: 2px solid #9adaff;
+  outline-offset: 4px;
+}
+@media (max-width: 360px) {
+  #double-ring-carousel {
+    padding: 16px 13px;
+  }
+  #double-ring-carousel .dc-header {
+    font-size: 12px;
+  }
+  #double-ring-carousel .dc-legend {
+    gap: 6px 8px;
+  }
+  #double-ring-carousel .dc-legend button {
+    font-size: 11px;
+  }
+  #double-ring-carousel .dc-chart text {
+    font-size: 11px;
+  }
+  #double-ring-carousel .dc-center {
+    gap: 3px;
+  }
+  #double-ring-carousel .dc-name {
+    font-size: 13px;
+  }
+  #double-ring-carousel .dc-number {
+    font-size: 23px;
+  }
+}
+@media (pointer: coarse) {
+  #double-ring-carousel .dc-play,
+  #double-ring-carousel .dc-legend button {
+    min-height: 44px;
+  }
+}

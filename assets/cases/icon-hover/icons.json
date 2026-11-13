@@ -1,0 +1,657 @@
+[
+  {
+    "id": "calendar",
+    "title": "Calendar",
+    "category": "Action",
+    "keywords": [
+      "action",
+      "calendar",
+      "date",
+      "schedule"
+    ],
+    "interaction": "hover",
+    "lottie": "https://useanimations.com/icons/calendar.json",
+    "svg": [],
+    "zip": "https://useanimations.com/icons/calendar.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/calendar.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import calendar from 'react-useanimations/lib/calendar';",
+      "export": "calendar"
+    },
+    "page": "https://useanimations.com/icons/calendar",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 267,
+    "bytes": 3244,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/calendar.json' });\nel.addEventListener('mouseenter', () => { a.setDirection(1); a.play(); });\nel.addEventListener('mouseleave', () => { a.setDirection(-1); a.play(); });"
+  },
+  {
+    "id": "edit",
+    "title": "Edit",
+    "category": "Action",
+    "keywords": [
+      "action",
+      "edit",
+      "edit-2",
+      "pencil",
+      "write"
+    ],
+    "interaction": "hover",
+    "lottie": "https://useanimations.com/icons/edit.json",
+    "svg": [
+      "https://useanimations.com/icons/edit/edit-2.svg",
+      "https://useanimations.com/icons/edit/edit.svg"
+    ],
+    "zip": "https://useanimations.com/icons/edit.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/edit.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import edit from 'react-useanimations/lib/edit';",
+      "export": "edit"
+    },
+    "page": "https://useanimations.com/icons/edit",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 2000,
+    "bytes": 2354,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/edit.json' });\nel.addEventListener('mouseenter', () => { a.setDirection(1); a.play(); });\nel.addEventListener('mouseleave', () => { a.setDirection(-1); a.play(); });"
+  },
+  {
+    "id": "explore",
+    "title": "Explore",
+    "category": "Action",
+    "keywords": [
+      "action",
+      "compass",
+      "discover",
+      "explore"
+    ],
+    "interaction": "hover",
+    "lottie": "https://useanimations.com/icons/explore.json",
+    "svg": [
+      "https://useanimations.com/icons/explore/explore.svg"
+    ],
+    "zip": "https://useanimations.com/icons/explore.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/explore.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import explore from 'react-useanimations/lib/explore';",
+      "export": "explore"
+    },
+    "page": "https://useanimations.com/icons/explore",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 833,
+    "bytes": 1399,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/explore.json' });\nel.addEventListener('mouseenter', () => { a.setDirection(1); a.play(); });\nel.addEventListener('mouseleave', () => { a.setDirection(-1); a.play(); });"
+  },
+  {
+    "id": "folder",
+    "title": "Folder",
+    "category": "Action",
+    "keywords": [
+      "action",
+      "folder"
+    ],
+    "interaction": "hover",
+    "lottie": "https://useanimations.com/icons/folder.json",
+    "svg": [
+      "https://useanimations.com/icons/folder/folder.svg"
+    ],
+    "zip": "https://useanimations.com/icons/folder.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/folder.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import folder from 'react-useanimations/lib/folder';",
+      "export": "folder"
+    },
+    "page": "https://useanimations.com/icons/folder",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 267,
+    "bytes": 2132,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/folder.json' });\nel.addEventListener('mouseenter', () => { a.setDirection(1); a.play(); });\nel.addEventListener('mouseleave', () => { a.setDirection(-1); a.play(); });"
+  },
+  {
+    "id": "home",
+    "title": "Home",
+    "category": "Action",
+    "keywords": [
+      "action",
+      "home",
+      "house"
+    ],
+    "interaction": "hover",
+    "lottie": "https://useanimations.com/icons/home.json",
+    "svg": [
+      "https://useanimations.com/icons/home/home.svg"
+    ],
+    "zip": "https://useanimations.com/icons/home.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/home.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import home from 'react-useanimations/lib/home';",
+      "export": "home"
+    },
+    "page": "https://useanimations.com/icons/home",
+    "width": 32,
+    "height": 32,
+    "fps": 60,
+    "durationMs": 517,
+    "bytes": 1850,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/home.json' });\nel.addEventListener('mouseenter', () => { a.setDirection(1); a.play(); });\nel.addEventListener('mouseleave', () => { a.setDirection(-1); a.play(); });"
+  },
+  {
+    "id": "info",
+    "title": "Info",
+    "category": "Action",
+    "keywords": [
+      "about",
+      "action",
+      "info",
+      "information"
+    ],
+    "interaction": "hover",
+    "lottie": "https://useanimations.com/icons/info.json",
+    "svg": [
+      "https://useanimations.com/icons/info/info.svg"
+    ],
+    "zip": "https://useanimations.com/icons/info.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/info.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import info from 'react-useanimations/lib/info';",
+      "export": "info"
+    },
+    "page": "https://useanimations.com/icons/info",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 333,
+    "bytes": 2489,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/info.json' });\nel.addEventListener('mouseenter', () => { a.setDirection(1); a.play(); });\nel.addEventListener('mouseleave', () => { a.setDirection(-1); a.play(); });"
+  },
+  {
+    "id": "settings",
+    "title": "Settings",
+    "category": "Action",
+    "keywords": [
+      "action",
+      "cog",
+      "gear",
+      "preferences",
+      "settings"
+    ],
+    "interaction": "hover",
+    "lottie": "https://useanimations.com/icons/settings.json",
+    "svg": [
+      "https://useanimations.com/icons/settings/settings.svg"
+    ],
+    "zip": "https://useanimations.com/icons/settings.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/settings.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import settings from 'react-useanimations/lib/settings';",
+      "export": "settings"
+    },
+    "page": "https://useanimations.com/icons/settings",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 1667,
+    "bytes": 3534,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/settings.json' });\nel.addEventListener('mouseenter', () => { a.setDirection(1); a.play(); });\nel.addEventListener('mouseleave', () => { a.setDirection(-1); a.play(); });"
+  },
+  {
+    "id": "trash",
+    "title": "Trash",
+    "category": "Action",
+    "keywords": [
+      "action",
+      "bin",
+      "delete",
+      "remove",
+      "trash"
+    ],
+    "interaction": "hover",
+    "lottie": "https://useanimations.com/icons/trash.json",
+    "svg": [
+      "https://useanimations.com/icons/trash/trash.svg"
+    ],
+    "zip": "https://useanimations.com/icons/trash.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/trash.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import trash from 'react-useanimations/lib/trash';",
+      "export": "trash"
+    },
+    "page": "https://useanimations.com/icons/trash",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 167,
+    "bytes": 2181,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/trash.json' });\nel.addEventListener('mouseenter', () => { a.setDirection(1); a.play(); });\nel.addEventListener('mouseleave', () => { a.setDirection(-1); a.play(); });"
+  },
+  {
+    "id": "trash-v2",
+    "title": "Trash V2",
+    "category": "Action",
+    "keywords": [
+      "action",
+      "bin",
+      "delete",
+      "remove",
+      "trash",
+      "trash-2"
+    ],
+    "interaction": "hover",
+    "lottie": "https://useanimations.com/icons/trash-v2.json",
+    "svg": [
+      "https://useanimations.com/icons/trash-v2/trash-2.svg"
+    ],
+    "zip": "https://useanimations.com/icons/trash-v2.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/trash-v2.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import trash2 from 'react-useanimations/lib/trash2';",
+      "export": "trash2"
+    },
+    "page": "https://useanimations.com/icons/trash-v2",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 167,
+    "bytes": 3148,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/trash-v2.json' });\nel.addEventListener('mouseenter', () => { a.setDirection(1); a.play(); });\nel.addEventListener('mouseleave', () => { a.setDirection(-1); a.play(); });"
+  },
+  {
+    "id": "zoom-in",
+    "title": "Zoom In",
+    "category": "Action",
+    "keywords": [
+      "action",
+      "in",
+      "magnifier",
+      "magnify",
+      "zoom"
+    ],
+    "interaction": "hover",
+    "lottie": "https://useanimations.com/icons/zoom-in.json",
+    "svg": [],
+    "zip": "https://useanimations.com/icons/zoom-in.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/zoom-in.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import zoomIn from 'react-useanimations/lib/zoomIn';",
+      "export": "zoomIn"
+    },
+    "page": "https://useanimations.com/icons/zoom-in",
+    "width": 32,
+    "height": 32,
+    "fps": 29.9700012207031,
+    "durationMs": 1001,
+    "bytes": 4054,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/zoom-in.json' });\nel.addEventListener('mouseenter', () => { a.setDirection(1); a.play(); });\nel.addEventListener('mouseleave', () => { a.setDirection(-1); a.play(); });"
+  },
+  {
+    "id": "zoom-out",
+    "title": "Zoom Out",
+    "category": "Action",
+    "keywords": [
+      "action",
+      "magnifier",
+      "magnify",
+      "out",
+      "zoom"
+    ],
+    "interaction": "hover",
+    "lottie": "https://useanimations.com/icons/zoom-out.json",
+    "svg": [],
+    "zip": "https://useanimations.com/icons/zoom-out.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/zoom-out.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import zoomOut from 'react-useanimations/lib/zoomOut';",
+      "export": "zoomOut"
+    },
+    "page": "https://useanimations.com/icons/zoom-out",
+    "width": 32,
+    "height": 32,
+    "fps": 29.9700012207031,
+    "durationMs": 1001,
+    "bytes": 2968,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/zoom-out.json' });\nel.addEventListener('mouseenter', () => { a.setDirection(1); a.play(); });\nel.addEventListener('mouseleave', () => { a.setDirection(-1); a.play(); });"
+  },
+  {
+    "id": "archive",
+    "title": "Archive",
+    "category": "Content",
+    "keywords": [
+      "archive",
+      "box",
+      "content",
+      "storage"
+    ],
+    "interaction": "hover",
+    "lottie": "https://useanimations.com/icons/archive.json",
+    "svg": [
+      "https://useanimations.com/icons/archive/archive.svg"
+    ],
+    "zip": "https://useanimations.com/icons/archive.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/archive.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import archive from 'react-useanimations/lib/archive';",
+      "export": "archive"
+    },
+    "page": "https://useanimations.com/icons/archive",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 167,
+    "bytes": 3971,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/archive.json' });\nel.addEventListener('mouseenter', () => { a.setDirection(1); a.play(); });\nel.addEventListener('mouseleave', () => { a.setDirection(-1); a.play(); });"
+  },
+  {
+    "id": "copy",
+    "title": "Copy",
+    "category": "Content",
+    "keywords": [
+      "clipboard",
+      "content",
+      "copy",
+      "duplicate"
+    ],
+    "interaction": "hover",
+    "lottie": "https://useanimations.com/icons/copy.json",
+    "svg": [
+      "https://useanimations.com/icons/copy/copy.svg"
+    ],
+    "zip": "https://useanimations.com/icons/copy.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/copy.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import copy from 'react-useanimations/lib/copy';",
+      "export": "copy"
+    },
+    "page": "https://useanimations.com/icons/copy",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 167,
+    "bytes": 1910,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/copy.json' });\nel.addEventListener('mouseenter', () => { a.setDirection(1); a.play(); });\nel.addEventListener('mouseleave', () => { a.setDirection(-1); a.play(); });"
+  },
+  {
+    "id": "mail",
+    "title": "Mail",
+    "category": "Content",
+    "keywords": [
+      "content",
+      "email",
+      "envelope",
+      "mail",
+      "message"
+    ],
+    "interaction": "hover",
+    "lottie": "https://useanimations.com/icons/mail.json",
+    "svg": [
+      "https://useanimations.com/icons/mail/mail.svg"
+    ],
+    "zip": "https://useanimations.com/icons/mail.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/mail.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import mail from 'react-useanimations/lib/mail';",
+      "export": "mail"
+    },
+    "page": "https://useanimations.com/icons/mail",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 667,
+    "bytes": 4351,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/mail.json' });\nel.addEventListener('mouseenter', () => { a.setDirection(1); a.play(); });\nel.addEventListener('mouseleave', () => { a.setDirection(-1); a.play(); });"
+  },
+  {
+    "id": "share",
+    "title": "Share",
+    "category": "Content",
+    "keywords": [
+      "content",
+      "send",
+      "share",
+      "social"
+    ],
+    "interaction": "hover",
+    "lottie": "https://useanimations.com/icons/share.json",
+    "svg": [
+      "https://useanimations.com/icons/share/share.svg"
+    ],
+    "zip": "https://useanimations.com/icons/share.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/share.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import share from 'react-useanimations/lib/share';",
+      "export": "share"
+    },
+    "page": "https://useanimations.com/icons/share",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 2500,
+    "bytes": 7209,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/share.json' });\nel.addEventListener('mouseenter', () => { a.setDirection(1); a.play(); });\nel.addEventListener('mouseleave', () => { a.setDirection(-1); a.play(); });"
+  },
+  {
+    "id": "user-minus",
+    "title": "User minus",
+    "category": "Content",
+    "keywords": [
+      "account",
+      "content",
+      "minus",
+      "person",
+      "profile",
+      "user",
+      "user-minus"
+    ],
+    "interaction": "hover",
+    "lottie": "https://useanimations.com/icons/user-minus.json",
+    "svg": [
+      "https://useanimations.com/icons/user-minus/user-minus.svg"
+    ],
+    "zip": "https://useanimations.com/icons/user-minus.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/user-minus.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import userMinus from 'react-useanimations/lib/userMinus';",
+      "export": "userMinus"
+    },
+    "page": "https://useanimations.com/icons/user-minus",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 267,
+    "bytes": 2370,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/user-minus.json' });\nel.addEventListener('mouseenter', () => { a.setDirection(1); a.play(); });\nel.addEventListener('mouseleave', () => { a.setDirection(-1); a.play(); });"
+  },
+  {
+    "id": "user-plus",
+    "title": "User plus",
+    "category": "Content",
+    "keywords": [
+      "account",
+      "content",
+      "person",
+      "plus",
+      "profile",
+      "user",
+      "user-plus"
+    ],
+    "interaction": "hover",
+    "lottie": "https://useanimations.com/icons/user-plus.json",
+    "svg": [
+      "https://useanimations.com/icons/user-plus/user-plus.svg"
+    ],
+    "zip": "https://useanimations.com/icons/user-plus.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/user-plus.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import userPlus from 'react-useanimations/lib/userPlus';",
+      "export": "userPlus"
+    },
+    "page": "https://useanimations.com/icons/user-plus",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 267,
+    "bytes": 2940,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/user-plus.json' });\nel.addEventListener('mouseenter', () => { a.setDirection(1); a.play(); });\nel.addEventListener('mouseleave', () => { a.setDirection(-1); a.play(); });"
+  },
+  {
+    "id": "user-x",
+    "title": "User X",
+    "category": "Content",
+    "keywords": [
+      "account",
+      "content",
+      "person",
+      "profile",
+      "user",
+      "user-x",
+      "x"
+    ],
+    "interaction": "hover",
+    "lottie": "https://useanimations.com/icons/user-x.json",
+    "svg": [
+      "https://useanimations.com/icons/user-x/user-x.svg"
+    ],
+    "zip": "https://useanimations.com/icons/user-x.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/user-x.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import userX from 'react-useanimations/lib/userX';",
+      "export": "userX"
+    },
+    "page": "https://useanimations.com/icons/user-x",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 267,
+    "bytes": 2966,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/user-x.json' });\nel.addEventListener('mouseenter', () => { a.setDirection(1); a.play(); });\nel.addEventListener('mouseleave', () => { a.setDirection(-1); a.play(); });"
+  },
+  {
+    "id": "instagram",
+    "title": "Instagram",
+    "category": "Social media",
+    "keywords": [
+      "instagram",
+      "social media"
+    ],
+    "interaction": "hover",
+    "lottie": "https://useanimations.com/icons/instagram.json",
+    "svg": [
+      "https://useanimations.com/icons/instagram/instagram.svg"
+    ],
+    "zip": "https://useanimations.com/icons/instagram.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/instagram.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import instagram from 'react-useanimations/lib/instagram';",
+      "export": "instagram"
+    },
+    "page": "https://useanimations.com/icons/instagram",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 333,
+    "bytes": 5647,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/instagram.json' });\nel.addEventListener('mouseenter', () => { a.setDirection(1); a.play(); });\nel.addEventListener('mouseleave', () => { a.setDirection(-1); a.play(); });"
+  },
+  {
+    "id": "youtube",
+    "title": "YouTube",
+    "category": "Social media",
+    "keywords": [
+      "social media",
+      "youtube"
+    ],
+    "interaction": "hover",
+    "lottie": "https://useanimations.com/icons/youtube.json",
+    "svg": [
+      "https://useanimations.com/icons/youtube/youtube.svg"
+    ],
+    "zip": "https://useanimations.com/icons/youtube.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/youtube.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import youtube from 'react-useanimations/lib/youtube';",
+      "export": "youtube"
+    },
+    "page": "https://useanimations.com/icons/youtube",
+    "width": 32,
+    "height": 32,
+    "fps": 30.0003051757812,
+    "durationMs": 1000,
+    "bytes": 8227,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/youtube.json' });\nel.addEventListener('mouseenter', () => { a.setDirection(1); a.play(); });\nel.addEventListener('mouseleave', () => { a.setDirection(-1); a.play(); });"
+  },
+  {
+    "id": "youtube-v2",
+    "title": "YouTube V2",
+    "category": "Social media",
+    "keywords": [
+      "social media",
+      "youtube",
+      "youtube-2"
+    ],
+    "interaction": "hover",
+    "lottie": "https://useanimations.com/icons/youtube-v2.json",
+    "svg": [
+      "https://useanimations.com/icons/youtube-v2/youtube-2.svg"
+    ],
+    "zip": "https://useanimations.com/icons/youtube-v2.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/youtube-v2.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import youtube2 from 'react-useanimations/lib/youtube2';",
+      "export": "youtube2"
+    },
+    "page": "https://useanimations.com/icons/youtube-v2",
+    "width": 32,
+    "height": 32,
+    "fps": 30.0003051757812,
+    "durationMs": 1000,
+    "bytes": 14827,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/youtube-v2.json' });\nel.addEventListener('mouseenter', () => { a.setDirection(1); a.play(); });\nel.addEventListener('mouseleave', () => { a.setDirection(-1); a.play(); });"
+  }
+]

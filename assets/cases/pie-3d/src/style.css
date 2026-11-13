@@ -1,0 +1,129 @@
+@charset "UTF-8";
+:root {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #e5edf5;
+  color-scheme: dark;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(120% 80% at 50% 0%, #082033 0%, #031020 58%, #020b14 100%);
+  padding: 26px 20px;
+}
+.stage {
+  width: min(560px, 94vw);
+  text-align: center;
+}
+.eyebrow {
+  font-size: 9.5px;
+  letter-spacing: 0.24em;
+  color: #59697a;
+}
+h1 {
+  font-size: 19px;
+  font-weight: 550;
+  letter-spacing: 0.02em;
+  margin: 9px 0 7px;
+}
+.head p {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.8;
+  color: #5c6a78;
+}
+.scene {
+  position: relative;
+  height: 292px;
+  display: grid;
+  place-items: center;
+  perspective: 1150px;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+.scene.dragging {
+  cursor: grabbing;
+}
+.halo {
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(130, 180, 230, 0.16), rgba(130, 180, 230, 0) 70%);
+  transform: translateY(34px);
+  filter: blur(4px);
+}
+.plate {
+  position: relative;
+  width: 264px;
+  height: 264px;
+  transform-style: preserve-3d;
+  transform: rotateX(60deg) rotateZ(0deg);
+  will-change: transform;
+}
+.layer {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  transform: translateZ(calc(var(--z) * -1.55px));
+  -webkit-mask: radial-gradient(circle at 50% 50%, transparent 0 78px, #000 79px 100%);
+  mask: radial-gradient(circle at 50% 50%, transparent 0 78px, #000 79px 100%);
+}
+.layer.face {
+  transform: translateZ(0);
+  background: var(--face);
+  box-shadow: inset 0 0 26px rgba(0, 0, 0, 0.55);
+}
+.legend {
+  list-style: none;
+  margin: 6px auto 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px 18px;
+  width: min(430px, 100%);
+  text-align: left;
+}
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  color: #818d9a;
+  line-height: 1.7;
+}
+.legend .swatch {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.legend strong {
+  margin-left: auto;
+  font-weight: 500;
+  color: #b8c3ce;
+  font-variant-numeric: tabular-nums;
+}
+@media (max-width: 480px) {
+  .scene {
+    height: 252px;
+  }
+  .plate {
+    width: 218px;
+    height: 218px;
+  }
+  .layer {
+    -webkit-mask: radial-gradient(circle at 50% 50%, transparent 0 64px, #000 65px 100%);
+    mask: radial-gradient(circle at 50% 50%, transparent 0 64px, #000 65px 100%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .plate {
+    transition: none;
+  }
+}

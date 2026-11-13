@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f7faf8"><meta name="description" content="嘉兴平湖市八个街镇分区地图，基于原始 GeoJSON 边界，已去除乍浦镇。">
+<title>平湖市 · 街镇分区图</title>
+<link rel="stylesheet" href="vendor/leaflet.css"><link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+<header class="topbar">
+ <a class="brand" href="./" aria-label="平湖市街镇分区图首页"><span class="brand-icon"><svg viewBox="0 0 24 24"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3zM9 3v15m6-12v15"/></svg></span><span>平湖市<span class="brand-divider">/</span><span class="brand-sub">街镇分区图</span></span></a>
+ <div class="top-actions"><span class="location">浙江省<span>·</span>嘉兴市</span><span class="vertical-line"></span><button id="download" class="export"><svg viewBox="0 0 24 24"><path d="M12 3v12m-4-4 4 4 4-4M4 15v5h16v-5"/></svg>导出分区图</button></div>
+</header>
+<main class="map-shell">
+ <div id="map" aria-label="平湖市街镇分区交互地图"></div>
+ <div class="map-tools floating"><button id="layers" title="图层设置" aria-label="图层设置" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="m12 3 10 5-10 5L2 8zm-10 9 10 5 10-5M2 16l10 5 10-5"/></svg></button><span></span><button id="reset" title="显示全部街镇" aria-label="显示全部街镇"><svg viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M8 8h8v8H8z"/></svg></button><span></span><button id="zoom-in" title="放大" aria-label="放大"><svg viewBox="0 0 24 24"><path d="M4 12h16M12 4v16"/></svg></button><button id="zoom-out" title="缩小" aria-label="缩小"><svg viewBox="0 0 24 24"><path d="M4 12h16"/></svg></button></div>
+ <section id="layer-panel" class="layer-panel floating" hidden><h2>地图图层</h2><label><span>道路底图</span><input id="base-toggle" type="checkbox" checked></label><label><span>街镇名称与标记</span><input id="labels-toggle" type="checkbox" checked></label><label><span>分区填充</span><input id="fill-toggle" type="checkbox" checked></label><label class="opacity"><span>填充透明度</span><output id="opacity-output">60%</output><input id="opacity" type="range" min="15" max="90" value="60"></label></section>
+ <div class="compass" aria-label="正北方向"><span>N</span><svg viewBox="0 0 28 44"><path fill="#2e5751" d="M14 4 24 36 14 28z"/><path fill="#b8cdc6" d="M14 4 4 36 14 28z"/></svg></div>
+ <section id="detail" class="detail floating" hidden aria-live="polite"><button class="close" id="detail-close" aria-label="关闭街镇详情">×</button><span class="detail-kicker">街镇详情</span><h2 id="detail-name"></h2><p>浙江省 · 嘉兴市 · 平湖市</p><div class="detail-info"><span>行政类型</span><b id="detail-type"></b></div><div class="detail-info"><span>分区归组</span><b id="detail-group"></b></div><button id="focus" class="focus">定位此分区 <span>↗</span></button></section>
+ <div class="map-note"><span class="status-dot"></span><span id="map-status">街镇边界来自所提供的 GeoJSON</span></div>
+ <div id="toast" class="toast" role="status" hidden></div>
+ <dialog id="export-dialog"><div class="dialog-heading"><h2>导出分区图</h2><button id="export-close" aria-label="关闭导出窗口">×</button></div><p>导出完整的八街镇分区，包含名称、图例和指北针。图片使用简洁背景，便于汇报与设计使用。</p><div class="export-options"><button id="export-png"><b>PNG 图片</b><span>高清 · 2400 × 2000</span><em>↓</em></button><button id="export-svg"><b>SVG 矢量图</b><span>可缩放 · 可继续编辑</span><em>↓</em></button><a download="平湖市街镇_不含乍浦镇.geojson" href="data/pinghu-no-zhapu.geojson"><b>GeoJSON 数据</b><span>8 个街镇 · 原始边界</span><em>↓</em></a></div></dialog>
+</main>
+<script src="vendor/leaflet.js"></script><script src="data.js"></script><script src="app.js?v=2"></script>
+</body></html>

@@ -1,0 +1,1234 @@
+[
+  {
+    "id": "notification",
+    "title": "Notification",
+    "category": "Notifications",
+    "keywords": [
+      "alert",
+      "bell",
+      "bell-off",
+      "mute",
+      "notification",
+      "notifications"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/notification.json",
+    "svg": [
+      "https://useanimations.com/icons/notification/bell-off.svg",
+      "https://useanimations.com/icons/notification/bell.svg"
+    ],
+    "zip": "https://useanimations.com/icons/notification.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/notification.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import notification from 'react-useanimations/lib/notification';",
+      "export": "notification"
+    },
+    "page": "https://useanimations.com/icons/notification",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 833,
+    "bytes": 2193,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/notification.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "notification-v2",
+    "title": "Notification V2",
+    "category": "Notifications",
+    "keywords": [
+      "alert",
+      "bell",
+      "bell-off",
+      "mute",
+      "notification",
+      "notifications"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/notification-v2.json",
+    "svg": [
+      "https://useanimations.com/icons/notification-v2/bell-off.svg",
+      "https://useanimations.com/icons/notification-v2/bell.svg"
+    ],
+    "zip": "https://useanimations.com/icons/notification-v2.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/notification-v2.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import notification2 from 'react-useanimations/lib/notification2';",
+      "export": "notification2"
+    },
+    "page": "https://useanimations.com/icons/notification-v2",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 833,
+    "bytes": 3709,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/notification-v2.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "menu",
+    "title": "Burger Menu",
+    "category": "Navigation",
+    "keywords": [
+      "burger",
+      "close",
+      "hamburger",
+      "menu",
+      "navigation"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/menu.json",
+    "svg": [
+      "https://useanimations.com/icons/menu/menu.svg"
+    ],
+    "zip": "https://useanimations.com/icons/menu.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/menu.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import menu from 'react-useanimations/lib/menu';",
+      "export": "menu"
+    },
+    "page": "https://useanimations.com/icons/menu",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 1000,
+    "bytes": 2805,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/menu.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "menu-v2",
+    "title": "Menu V2",
+    "category": "Navigation",
+    "keywords": [
+      "close",
+      "hamburger",
+      "menu",
+      "navigation"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/menu-v2.json",
+    "svg": [
+      "https://useanimations.com/icons/menu-v2/menu.svg"
+    ],
+    "zip": "https://useanimations.com/icons/menu-v2.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/menu-v2.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import menu2 from 'react-useanimations/lib/menu2';",
+      "export": "menu2"
+    },
+    "page": "https://useanimations.com/icons/menu-v2",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 2000,
+    "bytes": 2294,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/menu-v2.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "menu-v3",
+    "title": "Menu V3",
+    "category": "Navigation",
+    "keywords": [
+      "close",
+      "hamburger",
+      "menu",
+      "navigation"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/menu-v3.json",
+    "svg": [
+      "https://useanimations.com/icons/menu-v3/menu.svg"
+    ],
+    "zip": "https://useanimations.com/icons/menu-v3.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/menu-v3.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import menu3 from 'react-useanimations/lib/menu3';",
+      "export": "menu3"
+    },
+    "page": "https://useanimations.com/icons/menu-v3",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 1500,
+    "bytes": 2716,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/menu-v3.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "menu-v4",
+    "title": "Menu V4",
+    "category": "Navigation",
+    "keywords": [
+      "close",
+      "hamburger",
+      "menu",
+      "navigation"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/menu-v4.json",
+    "svg": [
+      "https://useanimations.com/icons/menu-v4/menu.svg"
+    ],
+    "zip": "https://useanimations.com/icons/menu-v4.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/menu-v4.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import menu4 from 'react-useanimations/lib/menu4';",
+      "export": "menu4"
+    },
+    "page": "https://useanimations.com/icons/menu-v4",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 700,
+    "bytes": 2391,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/menu-v4.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "bookmark",
+    "title": "Bookmark",
+    "category": "Action",
+    "keywords": [
+      "action",
+      "bookmark",
+      "save"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/bookmark.json",
+    "svg": [
+      "https://useanimations.com/icons/bookmark/bookmark.svg"
+    ],
+    "zip": "https://useanimations.com/icons/bookmark.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/bookmark.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import bookmark from 'react-useanimations/lib/bookmark';",
+      "export": "bookmark"
+    },
+    "page": "https://useanimations.com/icons/bookmark",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 333,
+    "bytes": 1886,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/bookmark.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "heart",
+    "title": "Heart",
+    "category": "Action",
+    "keywords": [
+      "action",
+      "favorite",
+      "heart",
+      "like",
+      "love"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/heart.json",
+    "svg": [
+      "https://useanimations.com/icons/heart/heart.svg"
+    ],
+    "zip": "https://useanimations.com/icons/heart.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/heart.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import heart from 'react-useanimations/lib/heart';",
+      "export": "heart"
+    },
+    "page": "https://useanimations.com/icons/heart",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 333,
+    "bytes": 2421,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/heart.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "lock",
+    "title": "Lock / Unlock",
+    "category": "Action",
+    "keywords": [
+      "action",
+      "lock",
+      "password",
+      "security",
+      "unlock"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/lock.json",
+    "svg": [
+      "https://useanimations.com/icons/lock/lock.svg"
+    ],
+    "zip": "https://useanimations.com/icons/lock.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/lock.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import lock from 'react-useanimations/lib/lock';",
+      "export": "lock"
+    },
+    "page": "https://useanimations.com/icons/lock",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 333,
+    "bytes": 1668,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/lock.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "maximize-minimize",
+    "title": "Maxi/Minimize",
+    "category": "Action",
+    "keywords": [
+      "action",
+      "collapse",
+      "expand",
+      "fullscreen",
+      "maxi",
+      "maximize",
+      "minimize"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/maximize-minimize.json",
+    "svg": [
+      "https://useanimations.com/icons/maximize-minimize/maximize.svg",
+      "https://useanimations.com/icons/maximize-minimize/minimize.svg"
+    ],
+    "zip": "https://useanimations.com/icons/maximize-minimize.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/maximize-minimize.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import maximizeMinimize from 'react-useanimations/lib/maximizeMinimize';",
+      "export": "maximizeMinimize"
+    },
+    "page": "https://useanimations.com/icons/maximize-minimize",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 333,
+    "bytes": 2922,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/maximize-minimize.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "maximize-minimize-v2",
+    "title": "Maxi/Minimize V2",
+    "category": "Action",
+    "keywords": [
+      "action",
+      "collapse",
+      "expand",
+      "fullscreen",
+      "maxi",
+      "maximize-2",
+      "minimize",
+      "minimize-2"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/maximize-minimize-v2.json",
+    "svg": [
+      "https://useanimations.com/icons/maximize-minimize-v2/maximize-2.svg",
+      "https://useanimations.com/icons/maximize-minimize-v2/minimize-2.svg"
+    ],
+    "zip": "https://useanimations.com/icons/maximize-minimize-v2.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/maximize-minimize-v2.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import maximizeMinimize2 from 'react-useanimations/lib/maximizeMinimize2';",
+      "export": "maximizeMinimize2"
+    },
+    "page": "https://useanimations.com/icons/maximize-minimize-v2",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 1000,
+    "bytes": 3146,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/maximize-minimize-v2.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "plus-to-x",
+    "title": "Plus/X",
+    "category": "Action",
+    "keywords": [
+      "action",
+      "add",
+      "close",
+      "expand",
+      "plus",
+      "x"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/plus-to-x.json",
+    "svg": [
+      "https://useanimations.com/icons/plus-to-x/plus.svg",
+      "https://useanimations.com/icons/plus-to-x/x.svg"
+    ],
+    "zip": "https://useanimations.com/icons/plus-to-x.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/plus-to-x.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import plusToX from 'react-useanimations/lib/plusToX';",
+      "export": "plusToX"
+    },
+    "page": "https://useanimations.com/icons/plus-to-x",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 1000,
+    "bytes": 1267,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/plus-to-x.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "search-to-x",
+    "title": "Search/X",
+    "category": "Action",
+    "keywords": [
+      "action",
+      "clear",
+      "close",
+      "search",
+      "x"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/search-to-x.json",
+    "svg": [
+      "https://useanimations.com/icons/search-to-x/search.svg",
+      "https://useanimations.com/icons/search-to-x/x.svg"
+    ],
+    "zip": "https://useanimations.com/icons/search-to-x.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/search-to-x.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import searchToX from 'react-useanimations/lib/searchToX';",
+      "export": "searchToX"
+    },
+    "page": "https://useanimations.com/icons/search-to-x",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 1000,
+    "bytes": 3185,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/search-to-x.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "settings-v2",
+    "title": "Settings V2",
+    "category": "Action",
+    "keywords": [
+      "action",
+      "cog",
+      "gear",
+      "preferences",
+      "settings",
+      "sliders"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/settings-v2.json",
+    "svg": [
+      "https://useanimations.com/icons/settings-v2/sliders.svg"
+    ],
+    "zip": "https://useanimations.com/icons/settings-v2.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/settings-v2.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import settings2 from 'react-useanimations/lib/settings2';",
+      "export": "settings2"
+    },
+    "page": "https://useanimations.com/icons/settings-v2",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 333,
+    "bytes": 5640,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/settings-v2.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "shield-off",
+    "title": "Shield Off",
+    "category": "Action",
+    "keywords": [
+      "action",
+      "off",
+      "shield",
+      "shield-off",
+      "shield-off-off"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/shield-off.json",
+    "svg": [
+      "https://useanimations.com/icons/shield-off/shield-off-off.svg",
+      "https://useanimations.com/icons/shield-off/shield-off.svg"
+    ],
+    "zip": "https://useanimations.com/icons/shield-off.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/shield-off.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import shieldOff from 'react-useanimations/lib/shieldOff';",
+      "export": "shieldOff"
+    },
+    "page": "https://useanimations.com/icons/shield-off",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 833,
+    "bytes": 1559,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/shield-off.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "star",
+    "title": "Star",
+    "category": "Action",
+    "keywords": [
+      "action",
+      "favorite",
+      "rating",
+      "star"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/star.json",
+    "svg": [
+      "https://useanimations.com/icons/star/star.svg"
+    ],
+    "zip": "https://useanimations.com/icons/star.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/star.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import star from 'react-useanimations/lib/star';",
+      "export": "star"
+    },
+    "page": "https://useanimations.com/icons/star",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 333,
+    "bytes": 2050,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/star.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "thumb-up",
+    "title": "Thumb up",
+    "category": "Action",
+    "keywords": [
+      "action",
+      "like",
+      "thumb",
+      "thumb-up",
+      "up",
+      "upvote"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/thumb-up.json",
+    "svg": [
+      "https://useanimations.com/icons/thumb-up/thumb-up.svg"
+    ],
+    "zip": "https://useanimations.com/icons/thumb-up.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/thumb-up.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import thumbUp from 'react-useanimations/lib/thumbUp';",
+      "export": "thumbUp"
+    },
+    "page": "https://useanimations.com/icons/thumb-up",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 733,
+    "bytes": 6883,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/thumb-up.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "visibility",
+    "title": "Visibility",
+    "category": "Action",
+    "keywords": [
+      "action",
+      "eye",
+      "eye-off",
+      "hide",
+      "password",
+      "show",
+      "visibility"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/visibility.json",
+    "svg": [
+      "https://useanimations.com/icons/visibility/eye-off.svg",
+      "https://useanimations.com/icons/visibility/eye.svg"
+    ],
+    "zip": "https://useanimations.com/icons/visibility.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/visibility.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import visibility from 'react-useanimations/lib/visibility';",
+      "export": "visibility"
+    },
+    "page": "https://useanimations.com/icons/visibility",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 833,
+    "bytes": 2581,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/visibility.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "visibility-v2",
+    "title": "Visibility V2",
+    "category": "Action",
+    "keywords": [
+      "action",
+      "eye",
+      "eye-off",
+      "hide",
+      "password",
+      "show",
+      "visibility"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/visibility-v2.json",
+    "svg": [
+      "https://useanimations.com/icons/visibility-v2/eye-off.svg",
+      "https://useanimations.com/icons/visibility-v2/eye.svg"
+    ],
+    "zip": "https://useanimations.com/icons/visibility-v2.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/visibility-v2.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import visibility2 from 'react-useanimations/lib/visibility2';",
+      "export": "visibility2"
+    },
+    "page": "https://useanimations.com/icons/visibility-v2",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 833,
+    "bytes": 2707,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/visibility-v2.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "visibility-v3",
+    "title": "Visibility V3",
+    "category": "Action",
+    "keywords": [
+      "action",
+      "eye",
+      "eye-off",
+      "hide",
+      "password",
+      "show",
+      "visibility"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/visibility-v3.json",
+    "svg": [
+      "https://useanimations.com/icons/visibility-v3/eye-off.svg",
+      "https://useanimations.com/icons/visibility-v3/eye.svg"
+    ],
+    "zip": "https://useanimations.com/icons/visibility-v3.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/visibility-v3.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import visibility3 from 'react-useanimations/lib/visibility3';",
+      "export": "visibility3"
+    },
+    "page": "https://useanimations.com/icons/visibility-v3",
+    "width": 32,
+    "height": 32,
+    "fps": 29.9700012207031,
+    "durationMs": 567,
+    "bytes": 5877,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/visibility-v3.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "check-box",
+    "title": "Checkbox",
+    "category": "Form",
+    "keywords": [
+      "check-square",
+      "checkbox",
+      "form",
+      "select"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/check-box.json",
+    "svg": [
+      "https://useanimations.com/icons/check-box/check-square.svg"
+    ],
+    "zip": "https://useanimations.com/icons/check-box.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/check-box.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import checkBox from 'react-useanimations/lib/checkBox';",
+      "export": "checkBox"
+    },
+    "page": "https://useanimations.com/icons/check-box",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 1000,
+    "bytes": 1862,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/check-box.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "radio-button",
+    "title": "Radio button",
+    "category": "Form",
+    "keywords": [
+      "button",
+      "check-circle",
+      "form",
+      "radio",
+      "select"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/radio-button.json",
+    "svg": [
+      "https://useanimations.com/icons/radio-button/check-circle.svg"
+    ],
+    "zip": "https://useanimations.com/icons/radio-button.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/radio-button.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import radioButton from 'react-useanimations/lib/radioButton';",
+      "export": "radioButton"
+    },
+    "page": "https://useanimations.com/icons/radio-button",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 1000,
+    "bytes": 1878,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/radio-button.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "toggle",
+    "title": "Toggle",
+    "category": "Form",
+    "keywords": [
+      "form",
+      "on off",
+      "switch",
+      "toggle",
+      "toggle-left",
+      "toggle-right"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/toggle.json",
+    "svg": [
+      "https://useanimations.com/icons/toggle/toggle-left.svg",
+      "https://useanimations.com/icons/toggle/toggle-right.svg"
+    ],
+    "zip": "https://useanimations.com/icons/toggle.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/toggle.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import toggle from 'react-useanimations/lib/toggle';",
+      "export": "toggle"
+    },
+    "page": "https://useanimations.com/icons/toggle",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 500,
+    "bytes": 1382,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/toggle.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "camera-off",
+    "title": "Camera Off",
+    "category": "Media",
+    "keywords": [
+      "camera",
+      "camera-off",
+      "camera-off-off",
+      "media",
+      "off"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/camera-off.json",
+    "svg": [
+      "https://useanimations.com/icons/camera-off/camera-off-off.svg",
+      "https://useanimations.com/icons/camera-off/camera-off.svg"
+    ],
+    "zip": "https://useanimations.com/icons/camera-off.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/camera-off.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import cameraOff from 'react-useanimations/lib/cameraOff';",
+      "export": "cameraOff"
+    },
+    "page": "https://useanimations.com/icons/camera-off",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 833,
+    "bytes": 1878,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/camera-off.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "mic-off",
+    "title": "Mic Off",
+    "category": "Media",
+    "keywords": [
+      "media",
+      "mic",
+      "mic-off",
+      "mic-off-off",
+      "off"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/mic-off.json",
+    "svg": [
+      "https://useanimations.com/icons/mic-off/mic-off-off.svg",
+      "https://useanimations.com/icons/mic-off/mic-off.svg"
+    ],
+    "zip": "https://useanimations.com/icons/mic-off.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/mic-off.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import micOff from 'react-useanimations/lib/micOff';",
+      "export": "micOff"
+    },
+    "page": "https://useanimations.com/icons/mic-off",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 833,
+    "bytes": 1963,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/mic-off.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "microphone",
+    "title": "Microphone",
+    "category": "Media",
+    "keywords": [
+      "audio",
+      "media",
+      "mic",
+      "mic-off",
+      "microphone",
+      "mute",
+      "record"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/microphone.json",
+    "svg": [
+      "https://useanimations.com/icons/microphone/mic-off.svg",
+      "https://useanimations.com/icons/microphone/mic.svg"
+    ],
+    "zip": "https://useanimations.com/icons/microphone.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/microphone.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import microphone from 'react-useanimations/lib/microphone';",
+      "export": "microphone"
+    },
+    "page": "https://useanimations.com/icons/microphone",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 833,
+    "bytes": 3442,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/microphone.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "microphone-v2",
+    "title": "Microphone V2",
+    "category": "Media",
+    "keywords": [
+      "audio",
+      "media",
+      "mic",
+      "mic-off",
+      "microphone",
+      "mute",
+      "record"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/microphone-v2.json",
+    "svg": [
+      "https://useanimations.com/icons/microphone-v2/mic-off.svg",
+      "https://useanimations.com/icons/microphone-v2/mic.svg"
+    ],
+    "zip": "https://useanimations.com/icons/microphone-v2.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/microphone-v2.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import microphone2 from 'react-useanimations/lib/microphone2';",
+      "export": "microphone2"
+    },
+    "page": "https://useanimations.com/icons/microphone-v2",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 833,
+    "bytes": 3565,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/microphone-v2.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "play-pause",
+    "title": "Play/Pause",
+    "category": "Media",
+    "keywords": [
+      "media",
+      "pause",
+      "play",
+      "player"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/play-pause.json",
+    "svg": [
+      "https://useanimations.com/icons/play-pause/pause.svg",
+      "https://useanimations.com/icons/play-pause/play.svg"
+    ],
+    "zip": "https://useanimations.com/icons/play-pause.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/play-pause.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import playPause from 'react-useanimations/lib/playPause';",
+      "export": "playPause"
+    },
+    "page": "https://useanimations.com/icons/play-pause",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 267,
+    "bytes": 1595,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/play-pause.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "play-pause-circle",
+    "title": "Play/Pause circle",
+    "category": "Media",
+    "keywords": [
+      "circle",
+      "media",
+      "pause",
+      "pause-circle",
+      "play",
+      "play-circle",
+      "player"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/play-pause-circle.json",
+    "svg": [
+      "https://useanimations.com/icons/play-pause-circle/pause-circle.svg",
+      "https://useanimations.com/icons/play-pause-circle/play-circle.svg"
+    ],
+    "zip": "https://useanimations.com/icons/play-pause-circle.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/play-pause-circle.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import playPauseCircle from 'react-useanimations/lib/playPauseCircle';",
+      "export": "playPauseCircle"
+    },
+    "page": "https://useanimations.com/icons/play-pause-circle",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 267,
+    "bytes": 2071,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/play-pause-circle.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "video",
+    "title": "Video",
+    "category": "Media",
+    "keywords": [
+      "camera",
+      "media",
+      "video",
+      "video call",
+      "video-off"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/video.json",
+    "svg": [
+      "https://useanimations.com/icons/video/video-off.svg",
+      "https://useanimations.com/icons/video/video.svg"
+    ],
+    "zip": "https://useanimations.com/icons/video.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/video.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import video from 'react-useanimations/lib/video';",
+      "export": "video"
+    },
+    "page": "https://useanimations.com/icons/video",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 533,
+    "bytes": 2659,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/video.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "video-off",
+    "title": "Video Off",
+    "category": "Media",
+    "keywords": [
+      "camera",
+      "media",
+      "off",
+      "video",
+      "video call",
+      "video-off",
+      "video-off-off"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/video-off.json",
+    "svg": [
+      "https://useanimations.com/icons/video-off/video-off-off.svg",
+      "https://useanimations.com/icons/video-off/video-off.svg"
+    ],
+    "zip": "https://useanimations.com/icons/video-off.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/video-off.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import videoOff from 'react-useanimations/lib/videoOff';",
+      "export": "videoOff"
+    },
+    "page": "https://useanimations.com/icons/video-off",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 833,
+    "bytes": 1748,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/video-off.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "video-v2",
+    "title": "Video V2",
+    "category": "Media",
+    "keywords": [
+      "camera",
+      "media",
+      "video",
+      "video call",
+      "video-off"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/video-v2.json",
+    "svg": [
+      "https://useanimations.com/icons/video-v2/video-off.svg",
+      "https://useanimations.com/icons/video-v2/video.svg"
+    ],
+    "zip": "https://useanimations.com/icons/video-v2.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/video-v2.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import video2 from 'react-useanimations/lib/video2';",
+      "export": "video2"
+    },
+    "page": "https://useanimations.com/icons/video-v2",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 533,
+    "bytes": 2778,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/video-v2.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "volume",
+    "title": "Volume",
+    "category": "Media",
+    "keywords": [
+      "audio",
+      "media",
+      "mute",
+      "sound",
+      "speaker",
+      "volume",
+      "volume-1",
+      "volume-2",
+      "volume-x"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/volume.json",
+    "svg": [
+      "https://useanimations.com/icons/volume/volume-1.svg",
+      "https://useanimations.com/icons/volume/volume-2.svg",
+      "https://useanimations.com/icons/volume/volume-x.svg",
+      "https://useanimations.com/icons/volume/volume.svg"
+    ],
+    "zip": "https://useanimations.com/icons/volume.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/volume.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import volume from 'react-useanimations/lib/volume';",
+      "export": "volume"
+    },
+    "page": "https://useanimations.com/icons/volume",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 1000,
+    "bytes": 4264,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/volume.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "phone-off",
+    "title": "Phone Off",
+    "category": "Communication",
+    "keywords": [
+      "communication",
+      "off",
+      "phone",
+      "phone-off",
+      "phone-off-off"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/phone-off.json",
+    "svg": [
+      "https://useanimations.com/icons/phone-off/phone-off-off.svg",
+      "https://useanimations.com/icons/phone-off/phone-off.svg"
+    ],
+    "zip": "https://useanimations.com/icons/phone-off.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/phone-off.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import phoneOff from 'react-useanimations/lib/phoneOff';",
+      "export": "phoneOff"
+    },
+    "page": "https://useanimations.com/icons/phone-off",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 833,
+    "bytes": 2132,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/phone-off.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "wifi-off",
+    "title": "Wifi Off",
+    "category": "Devices",
+    "keywords": [
+      "devices",
+      "off",
+      "wifi",
+      "wifi-off",
+      "wifi-off-off"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/wifi-off.json",
+    "svg": [
+      "https://useanimations.com/icons/wifi-off/wifi-off-off.svg",
+      "https://useanimations.com/icons/wifi-off/wifi-off.svg"
+    ],
+    "zip": "https://useanimations.com/icons/wifi-off.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/wifi-off.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import wifiOff from 'react-useanimations/lib/wifiOff';",
+      "export": "wifiOff"
+    },
+    "page": "https://useanimations.com/icons/wifi-off",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 833,
+    "bytes": 1860,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/wifi-off.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "cloud-off",
+    "title": "Cloud Off",
+    "category": "Weather",
+    "keywords": [
+      "cloud",
+      "cloud-off",
+      "cloud-off-off",
+      "off",
+      "weather"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/cloud-off.json",
+    "svg": [
+      "https://useanimations.com/icons/cloud-off/cloud-off-off.svg",
+      "https://useanimations.com/icons/cloud-off/cloud-off.svg"
+    ],
+    "zip": "https://useanimations.com/icons/cloud-off.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/cloud-off.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import cloudOff from 'react-useanimations/lib/cloudOff';",
+      "export": "cloudOff"
+    },
+    "page": "https://useanimations.com/icons/cloud-off",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 833,
+    "bytes": 1669,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/cloud-off.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  },
+  {
+    "id": "zap-off",
+    "title": "Zap Off",
+    "category": "Weather",
+    "keywords": [
+      "off",
+      "weather",
+      "zap",
+      "zap-off",
+      "zap-off-off"
+    ],
+    "interaction": "click-toggle",
+    "lottie": "https://useanimations.com/icons/zap-off.json",
+    "svg": [
+      "https://useanimations.com/icons/zap-off/zap-off-off.svg",
+      "https://useanimations.com/icons/zap-off/zap-off.svg"
+    ],
+    "zip": "https://useanimations.com/icons/zap-off.zip",
+    "shadcn": "npx shadcn@latest add https://useanimations.com/r/zap-off.json",
+    "react": {
+      "package": "react-useanimations",
+      "import": "import zapOff from 'react-useanimations/lib/zapOff';",
+      "export": "zapOff"
+    },
+    "page": "https://useanimations.com/icons/zap-off",
+    "width": 32,
+    "height": 32,
+    "fps": 30,
+    "durationMs": 833,
+    "bytes": 1559,
+    "requiresFullPlayer": false,
+    "snippet": "const a = lottie.loadAnimation({ container: el, renderer: 'svg', loop: false, autoplay: false, path: 'https://useanimations.com/icons/zap-off.json' });\nconst motion = matchMedia('(prefers-reduced-motion: reduce)');\nlet isOn = true; // Frame 0 is on; the final frame is off.\nel.addEventListener('click', () => { isOn = !isOn; if (motion.matches) a.goToAndStop(isOn ? 0 : a.totalFrames - 1, true); else { a.setDirection(isOn ? -1 : 1); a.play(); } });"
+  }
+]

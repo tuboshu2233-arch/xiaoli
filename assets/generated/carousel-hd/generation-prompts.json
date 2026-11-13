@@ -1,0 +1,116 @@
+{
+  "date": "2026-11-13",
+  "purpose": "High-resolution regenerated carousel and banner assets",
+  "assets": [
+    {
+      "name": "sky",
+      "mode": "built-in image_gen",
+      "source": "/Users/liyiheng/.codex/generated_images/01a1761d-86cd-7550-80dd-235a91e0efe9/exec-03ff416b-9d4e-4909-975d-277b995a77a7.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: a single high-resolution landscape photograph for a website image carousel, full bleed, 16:9 landscape framing. Generate a crisp alpine panorama above a vast soft sea of clouds at pale morning light, layered distant blue mountains, a delicate blue-grey sky with fine wispy clouds. Restrained cool blue and silver palette, natural photographic texture and sharply resolved mountain ridges, realistic atmospheric depth. Professional travel photography, natural exposure, no oversharpening, no artificial blur, no borders, no text, no watermark, no collage, no UI. Intended display up to 1200 CSS pixels wide; render at 2048px wide or higher if possible. This is a complete single photograph, not a contact sheet.",
+      "png": "assets/generated/carousel-hd/source/sky.png",
+      "asset": "assets/generated/carousel-hd/sky.webp",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "name": "clouds",
+      "mode": "built-in image_gen",
+      "source": "/Users/liyiheng/.codex/generated_images/01a1761d-86cd-7550-80dd-235a91e0efe9/exec-38d7fb67-dc7b-4b6e-88a9-31916b9f87e0.png",
+      "prompt": "Use case: photorealistic-natural. One full-bleed high-resolution 16:9 travel landscape photograph for an image carousel. A sweeping view of rugged blue alpine peaks nearly submerged in a dramatic billowing sea of silver-white clouds, bright soft sun glow at upper right, crisp ridgeline textures and naturally detailed clouds, deep atmospheric distance, cool blue palette. Professional realistic landscape photography, extremely clean focus and natural detail, no artificial blur, no text, no borders, no watermark, no UI, no collage. Render 2048px wide or higher if possible.",
+      "png": "assets/generated/carousel-hd/source/clouds.png",
+      "asset": "assets/generated/carousel-hd/clouds.webp",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "name": "snow",
+      "mode": "built-in image_gen",
+      "source": "/Users/liyiheng/.codex/generated_images/01a1761d-86cd-7550-80dd-235a91e0efe9/exec-cd4b325e-8083-46cd-afa4-fb26c7b20f5f.png",
+      "prompt": "Use case: photorealistic-natural. One full-bleed high-resolution 16:9 travel landscape photograph for an image carousel. Snow-covered alpine mountain range under a rich clear cobalt-blue sky, a dark rocky snow-dusted ridge in the foreground on the right, bright serrated distant summits across the horizon, crisp sunlit snow and rock texture. Professional photorealistic landscape photography, clear cold daylight, natural exposure, strong sharp focus, no blur, no text, no border, no watermark, no UI, no collage. Render 2048px wide or higher if possible.",
+      "png": "assets/generated/carousel-hd/source/snow.png",
+      "asset": "assets/generated/carousel-hd/snow.webp",
+      "width": 1672,
+      "height": 941
+    },
+    {
+      "name": "sale",
+      "mode": "built-in image_gen",
+      "source": "/Users/liyiheng/.codex/generated_images/01a1761d-86cd-7550-80dd-235a91e0efe9/exec-2ad7cc40-887c-4632-9f79-7193149d7c24.png",
+      "prompt": "Use case: ads-marketing. Generate ONE finished high-resolution, extra-wide 3.2:1 campaign BACKGROUND for a Chinese shopping-app banner. No text will be rendered in this image; a website will add live text over the LEFT HALF. Muted dusty blue background (#7397a8 family), clean playful cut-paper / matte 3D illustration style. On the RIGHT THIRD ONLY, a beautiful orange lightweight jacket hangs in a slight three-quarter view, with a few small navy abstract ribbon accents nearby. Strong clean silhouette, crisp fabric seams, soft restrained light and subtle depth. The LEFT 55% must remain calm empty blue negative space, including the lower-left area. Keep the jacket fully inside the right side with generous top and bottom safe area. Polished simple retail editorial campaign. No words, letters, logos, buttons, dots, outlines, UI, navigation, phone frame, collage, watermark, or blur. This is a single full-bleed banner background, ideally at least 1920px wide.",
+      "png": "assets/generated/carousel-hd/source/sale.png",
+      "asset": "assets/generated/carousel-hd/sale.webp",
+      "width": 2172,
+      "height": 724
+    },
+    {
+      "name": "blue",
+      "mode": "built-in image_gen",
+      "source": "/Users/liyiheng/.codex/generated_images/01a1761d-86cd-7550-80dd-235a91e0efe9/exec-896b69a1-1c36-413f-a900-d66ba147b582.png",
+      "prompt": "Use case: ads-marketing. Generate ONE finished high-resolution extra-wide 3.2:1 campaign BACKGROUND for a Chinese shopping-app summer gaming banner. The website will put live white text over the LEFT HALF; leave LEFT 55% as quiet empty deep indigo (#2c2871 family). On the RIGHT THIRD, show a small elegant mint and pale-yellow 3D game controller with subtle floating sparkle and geometric orbit accents, playful but restrained, polished matte illustration with extremely crisp edges and soft dimensional lighting. Keep all objects fully inside the right region with safe margins. Rich indigo background, subtle tonal depth, no gradient banding. No words, letters, logos, buttons, pagination dots, UI, phone, frames, collage, watermark, or blur. A single full-bleed banner background, ideally at least 1920px wide.",
+      "png": "assets/generated/carousel-hd/source/blue.png",
+      "asset": "assets/generated/carousel-hd/blue.webp",
+      "width": 2243,
+      "height": 701
+    },
+    {
+      "name": "home",
+      "mode": "built-in image_gen",
+      "source": "/Users/liyiheng/.codex/generated_images/01a1761d-86cd-7550-80dd-235a91e0efe9/exec-4a4bd080-fbd9-48fb-96c5-e4834df521d0.png",
+      "prompt": "Use case: ads-marketing. Generate ONE finished high-resolution extra-wide 3.2:1 campaign BACKGROUND for a Chinese shopping-app home-furnishing banner. Website will add live dark-navy text over the LEFT HALF, which must remain quiet empty warm pale-cream / soft yellow (#ece6b6 family). On the RIGHT THIRD ONLY, a playful clean isometric bedroom vignette: deep navy upholstered bed, pale cream bedding with muted blue cushions, simple orange house-roof outline framing the vignette, a tiny bedside plant. Contemporary cut-paper / matte 3D advertising illustration, crisp shapes and refined material detail, soft natural shadows, confident restrained palette matching orange/navy/cream. Keep all objects fully within the right region with safe margins. No words, letters, logos, buttons, dots, UI, phone, frames, collage, watermark, or blur. A single full-bleed banner background, ideally at least 1920px wide.",
+      "png": "assets/generated/carousel-hd/source/home.png",
+      "asset": "assets/generated/carousel-hd/home.webp",
+      "width": 2172,
+      "height": 724
+    },
+    {
+      "name": "seafood",
+      "mode": "built-in image_gen",
+      "source": "/Users/liyiheng/.codex/generated_images/01a1761d-86cd-7550-80dd-235a91e0efe9/exec-476605c1-3d6b-43d3-bcdf-c725dd8919af.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: ONE square, full-bleed, high-resolution architectural interior photograph for a restaurant image carousel. A clean real contemporary neighborhood Chinese restaurant, empty of people, warm natural daylight mixed with restrained warm pendant lighting, realistic oak tables and chairs, carefully resolved architectural details, clear sharp focus across the entire room as in professional f/8 interior photography, eye-level wide-angle perspective without distortion, 1:1 composition. Match a coherent warm wood / cream / charcoal visual family. No collage, no watermark, no frame, no UI, no intentionally blurred background, no extra random lettering or small gibberish menus. Render 1536x1536 or higher if possible. Subject: welcoming seafood eatery with cream plaster walls, pale oak dining tables, deep green upholstered chairs, tasteful blue-green hand-painted ocean and fish mural. One large dark Chinese sign on the back wall, exact text '海鲜小馆', clean well-formed Chinese characters, no other text. Fresh airy relaxed dining room with natural material texture.",
+      "png": "assets/generated/carousel-hd/source/seafood.png",
+      "asset": "assets/generated/carousel-hd/seafood.webp",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "name": "noodles",
+      "mode": "built-in image_gen",
+      "source": "/Users/liyiheng/.codex/generated_images/01a1761d-86cd-7550-80dd-235a91e0efe9/exec-e6d4aa4e-2b72-496b-ba20-78c93d298167.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: ONE square, full-bleed, high-resolution architectural interior photograph for a restaurant image carousel. A clean real contemporary neighborhood Chinese restaurant, empty of people, warm natural daylight mixed with restrained warm pendant lighting, realistic oak tables and chairs, carefully resolved architectural details, clear sharp focus across the entire room as in professional f/8 interior photography, eye-level wide-angle perspective without distortion, 1:1 composition. Match a coherent warm wood / cream / charcoal visual family. No collage, no watermark, no frame, no UI, no intentionally blurred background, no extra random lettering or small gibberish menus. Render 1536x1536 or higher if possible. Subject: a distinctive Chinese rice-noodle eatery with warm brick trim, cream wall, honey oak dining tables, black metal framed chairs and dark teal banquette. A tasteful large illustration of a noodle bowl and bamboo on the main wall, with ONE generous dark calligraphic Chinese headline, exact text '螺蛳粉', readable well-formed characters. Preserve the feeling of a lively casual noodle-shop interior, refined and uncluttered.",
+      "png": "assets/generated/carousel-hd/source/noodles.png",
+      "asset": "assets/generated/carousel-hd/noodles.webp",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "name": "restaurant",
+      "mode": "built-in image_gen",
+      "source": "/Users/liyiheng/.codex/generated_images/01a1761d-86cd-7550-80dd-235a91e0efe9/exec-3b20b76e-834a-4813-ac6a-f7e6d32b2f7c.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: ONE square, full-bleed, high-resolution architectural interior photograph for a restaurant image carousel. A clean real contemporary neighborhood Chinese restaurant, empty of people, warm natural daylight mixed with restrained warm pendant lighting, realistic oak tables and chairs, carefully resolved architectural details, clear sharp focus across the entire room as in professional f/8 interior photography, eye-level wide-angle perspective without distortion, 1:1 composition. Match a coherent warm wood / cream / charcoal visual family. No collage, no watermark, no frame, no UI, no intentionally blurred background, no extra random lettering or small gibberish menus. Render 1536x1536 or higher if possible. Subject: a contemporary Chinese skewer and hotpot restaurant. Warm oak slat wainscot on the rear wall, small square wood dining tables and simple oak stools, cream wall with one artistic framed menu-like illustration of skewers, subtle terracotta accents. One bold large Chinese sign on the main wall, exact text '串串香', readable well-formed characters, no other text.",
+      "png": "assets/generated/carousel-hd/source/restaurant.png",
+      "asset": "assets/generated/carousel-hd/restaurant.webp",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "name": "pancakes",
+      "mode": "built-in image_gen",
+      "source": "/Users/liyiheng/.codex/generated_images/01a1761d-86cd-7550-80dd-235a91e0efe9/exec-06bf7211-779f-4da7-b6b1-9de4abbc3de2.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: ONE square, full-bleed, high-resolution architectural interior photograph for a restaurant image carousel. A clean real contemporary neighborhood Chinese restaurant, empty of people, warm natural daylight mixed with restrained warm pendant lighting, realistic oak tables and chairs, carefully resolved architectural details, clear sharp focus across the entire room as in professional f/8 interior photography, eye-level wide-angle perspective without distortion, 1:1 composition. Match a coherent warm wood / cream / charcoal visual family. No collage, no watermark, no frame, no UI, no intentionally blurred background, no extra random lettering or small gibberish menus. Render 1536x1536 or higher if possible. Subject: a bright casual Chinese pancake cafe, cream limewash wall with an elegant food-themed mural, light wood dining tables, a row of orange and charcoal seats, black table legs, a clean service counter in the distance. One large dark Chinese sign on the back wall, exact text '煎饼铺', readable well-formed characters, no other text. Calm balanced square framing showing the seating and main feature wall.",
+      "png": "assets/generated/carousel-hd/source/pancakes.png",
+      "asset": "assets/generated/carousel-hd/pancakes.webp",
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "name": "mural",
+      "mode": "built-in image_gen",
+      "source": "/Users/liyiheng/.codex/generated_images/01a1761d-86cd-7550-80dd-235a91e0efe9/exec-a74d5271-21da-462e-8a29-735962c75082.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: ONE square, full-bleed, high-resolution architectural interior photograph for a restaurant image carousel. A clean real contemporary neighborhood Chinese restaurant, empty of people, warm natural daylight mixed with restrained warm pendant lighting, realistic oak tables and chairs, carefully resolved architectural details, clear sharp focus across the entire room as in professional f/8 interior photography, eye-level wide-angle perspective without distortion, 1:1 composition. Match a coherent warm wood / cream / charcoal visual family. No collage, no watermark, no frame, no UI, no intentionally blurred background, no extra random lettering or small gibberish menus. Render 1536x1536 or higher if possible. Subject: a cozy Chinese neighborhood canteen with a sophisticated large painted mural of traditional street architecture and mountain silhouettes on a cream wall, warm wooden tabletops, black chairs and a few muted orange cushions. One large Chinese title integrated into the wall, exact text '街角食堂', readable well-formed characters, no other text. Warm inviting composition with realistic texture and uncluttered furniture.",
+      "png": "assets/generated/carousel-hd/source/mural.png",
+      "asset": "assets/generated/carousel-hd/mural.webp",
+      "width": 1254,
+      "height": 1254
+    }
+  ]
+}

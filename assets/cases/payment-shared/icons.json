@@ -1,0 +1,39 @@
+{
+  "tick": [
+    [
+      "path",
+      {
+        "d": "M5 14L8.5 17.5L19 6.5",
+        "stroke": "currentColor",
+        "strokeLinecap": "round",
+        "strokeLinejoin": "round",
+        "strokeWidth": "1.5",
+        "key": "0"
+      }
+    ]
+  ],
+  "cancel": [
+    [
+      "path",
+      {
+        "d": "M18.9991 19L5 5.00098",
+        "stroke": "currentColor",
+        "strokeLinecap": "round",
+        "strokeLinejoin": "round",
+        "strokeWidth": "1.5",
+        "key": "0"
+      }
+    ],
+    [
+      "path",
+      {
+        "d": "M19 5L5.00092 18.999",
+        "stroke": "currentColor",
+        "strokeLinecap": "round",
+        "strokeLinejoin": "round",
+        "strokeWidth": "1.5",
+        "key": "1"
+      }
+    ]
+  ]
+}

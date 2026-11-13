@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Website Home Style · 玻璃折射首页</title>
+  <link rel="stylesheet" href="style.css?v=3">
+  <script src="app.bundle.js?v=14" defer></script>
+</head>
+<body>
+  <main class="homepage" id="homepage" data-slide="0">
+    <div id="scene" class="scene" aria-label="可拖动旋转的折射玻璃，背景文字为 Website Home Style"></div>
+    <h1 class="sr-only" id="headline">Website Home Style</h1>
+    <header class="site-header">
+      <button type="button" class="brand" data-slide="0" aria-label="Design Index 首页"><img src="assets/brand-mark.png" alt=""><span>Design <b>Index</b></span></button>
+      <nav aria-label="首页导航"><button type="button" data-slide="0" aria-current="page">Home</button><button type="button" data-slide="1">Work</button><button type="button" data-slide="2">About</button></nav>
+    </header>
+    <div class="slide-arrows" aria-label="切换首页标题"><button type="button" id="previous" aria-label="上一个标题"><img src="assets/arrow-left.png" alt=""></button><button type="button" id="next" aria-label="下一个标题"><img src="assets/arrow-right.png" alt=""></button></div>
+    <div class="slide-dots" role="group" aria-label="选择首页标题"><button type="button" data-slide="0" aria-label="Website Home Style" aria-pressed="true"></button><button type="button" data-slide="1" aria-label="Create Your World" aria-pressed="false"></button><button type="button" data-slide="2" aria-label="Make Ideas Move" aria-pressed="false"></button></div>
+    <footer class="hero-footer">
+      <p class="manifesto">Let's build the<br>future of<br><strong id="manifesto-last">websites.</strong></p>
+      <div class="explore-track"><button type="button" id="explore">Explore now</button><span aria-hidden="true"></span></div>
+      <span class="page-number" id="page-number" aria-hidden="true">01</span>
+    </footer>
+    <div class="interaction-controls"><button type="button" id="motion-toggle" aria-pressed="true" aria-label="暂停自动转动">Pause motion</button><span>Drag to rotate</span></div>
+    <div class="render-error" id="render-error" hidden role="alert"><p>此浏览器未启用 3D 渲染。</p><a href="reference.mp4" target="_blank" rel="noopener noreferrer">查看参考视频</a></div>
+    <p class="sr-only" id="status" role="status" aria-live="polite"></p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>Statistics Side Bar · 侧栏切换</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <main class="stage">
+      <section class="card">
+        <header class="profile">
+          <span class="avatar">HN</span>
+          <div class="who"><strong>Hoang Nguyen</strong><span>hoangnguyen2707@gmail.com</span></div>
+        </header>
+        <div class="icons" role="group" aria-label="面板操作">
+          <button type="button" aria-label="编辑">
+            <svg viewBox="0 0 24 24"><path d="M4 20h4l10-10-4-4L4 16v4Z" /><path d="M13 7l4 4" /></svg>
+          </button>
+          <button type="button" aria-label="文档">
+            <svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6V3Z" /><path d="M9 12h6M9 16h6" /></svg>
+          </button>
+          <button type="button" class="active" aria-label="新建">
+            <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" /></svg>
+          </button>
+          <button type="button" aria-label="复制">
+            <svg viewBox="0 0 24 24"><rect x="8" y="8" width="11" height="11" rx="2" /><path d="M5 15V6a1 1 0 0 1 1-1h9" /></svg>
+          </button>
+          <button type="button" aria-label="删除">
+            <svg viewBox="0 0 24 24"><path d="M4 7h16M9 7V5h6v2M6 7l1 13h10l1-13" /></svg>
+          </button>
+        </div>
+        <section class="stats">
+          <h1>个人统计</h1>
+          <div class="filters" id="filters" role="group" aria-label="时间范围">
+            <button type="button" data-range="all" aria-pressed="true">全部</button>
+            <button type="button" data-range="7" aria-pressed="false">近 7 天</button>
+            <button type="button" data-range="30" aria-pressed="false">近 30 天</button>
+          </div>
+          <ul class="week" id="week" aria-label="每周活跃度"></ul>
+          <div class="summary">
+            <div class="ring">
+              <svg viewBox="0 0 80 80" aria-hidden="true">
+                <circle class="track" cx="40" cy="40" r="34" />
+                <circle class="value" id="ring" cx="40" cy="40" r="34" />
+              </svg>
+              <strong id="efficacy">95%</strong>
+              <span>效率</span>
+            </div>
+            <ul class="metrics" id="metrics"></ul>
+          </div>
+        </section>
+      </section>
+      <p class="hint">切换右上时间范围，柱状图与指标同步更新</p>
+    </main>
+    <script src="src/demo.js"></script>
+  </body>
+</html>

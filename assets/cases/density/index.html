@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Xchange · 表格密度</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <main class="stage">
+      <section class="panel">
+        <div class="toolbar">
+          <label class="search"><i></i><input id="search" type="search" placeholder="搜索币种…" aria-label="搜索币种" /></label>
+          <button class="filters" type="button">+ 添加筛选</button>
+          <div class="density" id="density" role="group" aria-label="表格密度">
+            <button type="button" data-density="compact" aria-pressed="false" aria-label="紧凑"><span class="d1"></span></button>
+            <button type="button" data-density="normal" aria-pressed="true" aria-label="标准"><span class="d2"></span></button>
+            <button type="button" data-density="relaxed" aria-pressed="false" aria-label="宽松"><span class="d3"></span></button>
+          </div>
+        </div>
+        <div class="table" id="table" data-density="normal">
+          <div class="thead">
+            <span>排名</span><span>币种</span><span>价格</span><span>24h 成交量</span><span>市值</span><span>24h 涨跌</span>
+          </div>
+          <div class="body" id="body"></div>
+        </div>
+        <div class="footer">
+          <span class="rows-per-page">20 行</span>
+          <div class="pager"><button type="button" aria-label="上一页">‹</button><span>1-20 / 230</span><button type="button" aria-label="下一页">›</button></div>
+        </div>
+      </section>
+      <p class="hint">点击右上三个图标切换表格密度 · 搜索可筛选 · 行高平滑过渡</p>
+    </main>
+    <script src="src/demo.js"></script>
+  </body>
+</html>

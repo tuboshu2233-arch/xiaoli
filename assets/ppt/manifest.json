@@ -1,0 +1,254 @@
+[
+  {
+    "slide": 4,
+    "file": "image2.png",
+    "width": 3840,
+    "height": 2311,
+    "frames": 1
+  },
+  {
+    "slide": 4,
+    "file": "image1.png",
+    "width": 3840,
+    "height": 2310,
+    "frames": 1
+  },
+  {
+    "slide": 5,
+    "file": "image1.png",
+    "width": 3840,
+    "height": 2310,
+    "frames": 1
+  },
+  {
+    "slide": 5,
+    "file": "image7.png",
+    "width": 3840,
+    "height": 2160,
+    "frames": 1
+  },
+  {
+    "slide": 5,
+    "file": "image6.png",
+    "width": 3840,
+    "height": 2160,
+    "frames": 1
+  },
+  {
+    "slide": 5,
+    "file": "image5.png",
+    "width": 3840,
+    "height": 2160,
+    "frames": 1
+  },
+  {
+    "slide": 5,
+    "file": "image4.png",
+    "width": 3840,
+    "height": 2310,
+    "frames": 1
+  },
+  {
+    "slide": 5,
+    "file": "image3.png",
+    "width": 3840,
+    "height": 2160,
+    "frames": 1
+  },
+  {
+    "slide": 6,
+    "file": "image9.png",
+    "width": 1600,
+    "height": 900,
+    "frames": 1
+  },
+  {
+    "slide": 6,
+    "file": "image8.jpeg",
+    "width": 2202,
+    "height": 1238,
+    "frames": 1
+  },
+  {
+    "slide": 7,
+    "file": "image11.png",
+    "width": 1255,
+    "height": 717,
+    "frames": 1
+  },
+  {
+    "slide": 7,
+    "file": "image10.webp",
+    "width": 777,
+    "height": 400,
+    "frames": 1
+  },
+  {
+    "slide": 8,
+    "file": "image13.png",
+    "width": 1600,
+    "height": 900,
+    "frames": 1
+  },
+  {
+    "slide": 8,
+    "file": "image12.png",
+    "width": 1600,
+    "height": 900,
+    "frames": 1
+  },
+  {
+    "slide": 9,
+    "file": "image15.png",
+    "width": 3240,
+    "height": 1823,
+    "frames": 1
+  },
+  {
+    "slide": 9,
+    "file": "image14.png",
+    "width": 3240,
+    "height": 1821,
+    "frames": 1
+  },
+  {
+    "slide": 10,
+    "file": "image16.gif",
+    "width": 892,
+    "height": 452,
+    "frames": 58
+  },
+  {
+    "slide": 11,
+    "file": "image17.gif",
+    "width": 1920,
+    "height": 1080,
+    "frames": 45
+  },
+  {
+    "slide": 12,
+    "file": "image18.gif",
+    "width": 906,
+    "height": 500,
+    "frames": 39
+  },
+  {
+    "slide": 16,
+    "file": "image20.png",
+    "width": 350,
+    "height": 375,
+    "frames": 1
+  },
+  {
+    "slide": 16,
+    "file": "image19.png",
+    "width": 350,
+    "height": 375,
+    "frames": 1
+  },
+  {
+    "slide": 20,
+    "file": "image21.jpeg",
+    "width": 2018,
+    "height": 1148,
+    "frames": 1
+  },
+  {
+    "slide": 21,
+    "file": "image22.webp",
+    "width": 1267,
+    "height": 1333,
+    "frames": 80
+  },
+  {
+    "slide": 22,
+    "file": "image22.webp",
+    "width": 1267,
+    "height": 1333,
+    "frames": 80
+  },
+  {
+    "slide": 24,
+    "file": "image24.webp",
+    "width": 744,
+    "height": 447,
+    "frames": 13
+  },
+  {
+    "slide": 24,
+    "file": "image23.webp",
+    "width": 582,
+    "height": 1036,
+    "frames": 34
+  },
+  {
+    "slide": 25,
+    "file": "image25.webp",
+    "width": 500,
+    "height": 216,
+    "frames": 97
+  },
+  {
+    "slide": 26,
+    "file": "image26.webp",
+    "width": 640,
+    "height": 320,
+    "frames": 181
+  },
+  {
+    "slide": 27,
+    "file": "image27.png",
+    "width": 1248,
+    "height": 726,
+    "frames": 1
+  },
+  {
+    "slide": 28,
+    "file": "image28.jpeg",
+    "width": 156,
+    "height": 12,
+    "frames": 1
+  },
+  {
+    "slide": 32,
+    "file": "image29.png",
+    "width": 1080,
+    "height": 2340,
+    "frames": 1
+  },
+  {
+    "slide": 33,
+    "file": "image29.png",
+    "width": 1080,
+    "height": 2340,
+    "frames": 1
+  },
+  {
+    "slide": 34,
+    "file": "image31.jpeg",
+    "width": 1220,
+    "height": 1244,
+    "frames": 1
+  },
+  {
+    "slide": 34,
+    "file": "image30.jpeg",
+    "width": 1220,
+    "height": 1024,
+    "frames": 1
+  },
+  {
+    "slide": 35,
+    "file": "image33.png",
+    "width": 828,
+    "height": 1792,
+    "frames": 1
+  },
+  {
+    "slide": 35,
+    "file": "image32.png",
+    "width": 1125,
+    "height": 2436,
+    "frames": 1
+  }
+]

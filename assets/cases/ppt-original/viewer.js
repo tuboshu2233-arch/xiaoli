@@ -1,0 +1,3 @@
+const image=document.getElementById('original-motion'),toggle=document.getElementById('motion-toggle'),body=document.body;let playing=!matchMedia('(prefers-reduced-motion: reduce)').matches;
+function render(){image.src=playing?body.dataset.motion:body.dataset.poster;toggle.textContent=playing?'暂停':'播放';toggle.setAttribute('aria-pressed',String(playing))}
+toggle.addEventListener('click',()=>{playing=!playing;render()});document.getElementById('motion-replay').addEventListener('click',()=>{playing=true;toggle.textContent='暂停';toggle.setAttribute('aria-pressed','true');image.src=body.dataset.motion+'?replay='+Date.now()});render();

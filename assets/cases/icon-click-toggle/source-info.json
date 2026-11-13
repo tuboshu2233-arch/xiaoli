@@ -1,0 +1,39 @@
+{
+  "name": "useAnimations",
+  "homepage": "https://useanimations.com/",
+  "documentation": "https://useanimations.com/documentation.md",
+  "license": {
+    "name": "MIT",
+    "url": "https://opensource.org/license/mit/",
+    "terms": "https://useanimations.com/licencing-and-terms",
+    "attribution": "Optional, not required. Appreciated example: Animated icons by <a href=\"https://useanimations.com\">useAnimations</a>",
+    "restrictions": "None beyond standard MIT terms (provided as-is, without warranty)."
+  },
+  "player": {
+    "web": {
+      "npm": "lottie-web",
+      "cdn": "https://cdn.jsdelivr.net/npm/lottie-web@5.13.0/build/player/lottie_light.min.js",
+      "cdnFull": "https://cdn.jsdelivr.net/npm/lottie-web@5.13.0/build/player/lottie.min.js",
+      "note": "Use the light build unless requiresFullPlayer is true. Use renderer 'svg'; the icons are stroke-based, so CSS `svg path { stroke: ... }` recolors them."
+    },
+    "react": {
+      "npm": "react-useanimations",
+      "usage": "import UseAnimations from 'react-useanimations'; import github from 'react-useanimations/lib/github'; <UseAnimations animation={github} size={32} />",
+      "note": "Built-in player (no lottie-web), follows currentColor, respects prefers-reduced-motion. Several icons: import { github, heart } from react-useanimations/icons."
+    },
+    "shadcn": {
+      "registry": "https://useanimations.com/r/registry.json",
+      "usage": "npx shadcn@latest add https://useanimations.com/r/<id>.json, then <AnimatedCheckmark size={24} />"
+    },
+    "ios": "https://github.com/airbnb/lottie-ios",
+    "android": "https://github.com/airbnb/lottie-android"
+  },
+  "interactions": {
+    "loop": "Plays continuously; stays on the static first frame when reduced motion is preferred.",
+    "click-toggle": "Toggles between two states on click, or switches immediately when reduced motion is preferred.",
+    "click-replay": "Replays once from the start on every click unless reduced motion is preferred.",
+    "hover": "Plays forward on mouseenter and backward on mouseleave.",
+    "hover-replay": "Plays once on mouseenter unless reduced motion is preferred. Leaving does not stop it; entering during playback does not restart it.",
+    "hover-loop": "Loops while hovered, finishes the current cycle after mouseleave and stays static when reduced motion is preferred."
+  }
+}

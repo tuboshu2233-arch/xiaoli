@@ -1,0 +1,246 @@
+@charset "UTF-8";
+:root {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #e2edf4;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(120% 70% at 50% 0%, #082033 0%, #031020 58%, #020b14 100%);
+  padding: 18px;
+}
+.stage {
+  text-align: center;
+}
+.card {
+  width: 300px;
+  border-radius: 16px;
+  background: #071a2b;
+  box-shadow: 0 24px 46px rgba(0, 0, 0, 0.5);
+  padding: 18px 18px 20px;
+  text-align: left;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding-bottom: 14px;
+}
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #14a9ff, #3b70ff);
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: #031020;
+  flex-shrink: 0;
+}
+.who strong {
+  display: block;
+  font-size: 11.5px;
+  font-weight: 550;
+  color: #e2edf4;
+  line-height: 1.5;
+}
+.who span {
+  font-size: 8.5px;
+  color: #5d7a92;
+}
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 6px;
+  border-radius: 8px;
+  background: #0a2131;
+  margin-bottom: 18px;
+}
+.icons button {
+  width: 28px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.icons button:hover {
+  background: #0d2b40;
+}
+.icons button.active {
+  background: #14a9ff;
+}
+.icons svg {
+  width: 13px;
+  height: 13px;
+  fill: none;
+  stroke: #90a7bb;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.icons button.active svg {
+  stroke: #031020;
+}
+.stats h1 {
+  font-size: 12.5px;
+  font-weight: 550;
+  margin: 0 0 10px;
+  color: #e2edf4;
+}
+.filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.filters button {
+  border: 0;
+  background: none;
+  padding: 0;
+  font: inherit;
+  font-size: 8.5px;
+  color: #5d7a92;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+.filters button:hover {
+  color: #90a7bb;
+}
+.filters button[aria-pressed="true"] {
+  color: #e2edf4;
+  font-weight: 550;
+}
+.week {
+  list-style: none;
+  margin: 0 0 18px;
+  padding: 0;
+  display: grid;
+  gap: 9px;
+}
+.week li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.week .day {
+  width: 18px;
+  font-size: 8px;
+  letter-spacing: 0.06em;
+  color: #5d7a92;
+}
+.week .bar {
+  flex: 1;
+  height: 3px;
+  border-radius: 2px;
+  background: #16344a;
+  overflow: hidden;
+}
+.week .bar i {
+  display: block;
+  height: 100%;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #12bdc9, #23efed);
+  transition: width 0.45s cubic-bezier(0.3, 0.8, 0.3, 1);
+}
+.summary {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.ring {
+  position: relative;
+  width: 76px;
+  height: 76px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.ring svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+.ring circle {
+  fill: none;
+  stroke-width: 2.5;
+}
+.ring .track {
+  stroke: #16344a;
+}
+.ring .value {
+  stroke: #14a9ff;
+  stroke-linecap: round;
+  stroke-dasharray: 213.6;
+  stroke-dashoffset: 10.7;
+  transition: stroke-dashoffset 0.5s cubic-bezier(0.3, 0.8, 0.3, 1);
+}
+.ring strong {
+  font-size: 17px;
+  font-weight: 500;
+  color: #e2edf4;
+  line-height: 1;
+  margin-top: 3px;
+}
+.ring span {
+  position: absolute;
+  bottom: 17px;
+  font-size: 7px;
+  color: #5d7a92;
+  letter-spacing: 0.04em;
+}
+.metrics {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 9px;
+  flex: 1;
+}
+.metrics li {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+}
+.metrics b {
+  font-size: 11px;
+  font-weight: 550;
+  color: #e2edf4;
+  font-variant-numeric: tabular-nums;
+  min-width: 22px;
+}
+.metrics span {
+  font-size: 8px;
+  color: #5d7a92;
+}
+.hint {
+  margin: 13px 0 0;
+  font-size: 10px;
+  color: #90a7bb;
+}
+@media (max-height: 540px) {
+  .card {
+    padding: 14px 16px 16px;
+  }
+  .week {
+    margin-bottom: 12px;
+    gap: 6px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .week .bar i,
+  .ring .value {
+    transition: none;
+  }
+}

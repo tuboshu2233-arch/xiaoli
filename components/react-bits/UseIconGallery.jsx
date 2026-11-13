@@ -1,0 +1,18 @@
+import React,{useEffect,useRef,useState} from 'react';
+import lottie from 'lottie-web/build/player/lottie_light';
+import './icons.css';
+
+const names={'notification':'通知','menu':'菜单','bookmark':'书签','heart':'喜欢','lock':'锁定','maximize-minimize':'放大缩小','plus-to-x':'添加关闭','search-to-x':'搜索关闭','settings':'设置','shield-off':'关闭防护','star':'星标','thumb-up':'点赞','visibility':'可见性','check-box':'复选框','radio-button':'单选框','toggle':'开关','camera-off':'关闭相机','mic-off':'静音','microphone':'麦克风','play-pause':'播放暂停','play-pause-circle':'圆形播放暂停','video':'视频','video-off':'关闭视频','volume':'音量','phone-off':'挂断','wifi-off':'关闭无线网络','cloud-off':'关闭云同步','zap-off':'关闭闪电','calendar':'日历','edit':'编辑','explore':'探索','folder':'文件夹','home':'首页','info':'信息','trash':'删除','zoom-in':'放大','zoom-out':'缩小','archive':'归档','copy':'复制','mail':'邮件','share':'分享','user-minus':'移除用户','user-plus':'添加用户','user-x':'删除用户','instagram':'Instagram','youtube':'YouTube'};
+function titleOf(id){const base=id.replace(/-v\d+$/,'');return (names[base]||id)+(id.match(/-v(\d+)$/)?.[1]?' '+id.match(/-v(\d+)$/)[1]:'')}
+function IconTile({icon,data,hover}){
+ const container=useRef(null),animation=useRef(null),[alternate,setAlternate]=useState(false),touch=useRef(false);
+ useEffect(()=>{const a=lottie.loadAnimation({container:container.current,renderer:'svg',loop:false,autoplay:false,animationData:structuredClone(data),rendererSettings:{title:icon.title}});animation.current=a;return()=>{a.destroy();animation.current=null}},[data,icon.title]);
+ const move=forward=>{const a=animation.current;if(!a)return;if(matchMedia('(prefers-reduced-motion: reduce)').matches)a.goToAndStop(forward?a.totalFrames-1:0,true);else{a.setDirection(forward?1:-1);a.play()}};
+ const toggle=()=>{const next=!alternate;setAlternate(next);move(next)};
+ return <button className="icon-tile" type="button" aria-label={titleOf(icon.id)+' · '+icon.title} aria-pressed={hover?undefined:alternate} onPointerDown={e=>{touch.current=e.pointerType==='touch'}} onClick={()=>{if(!hover||touch.current)toggle()}} onMouseEnter={()=>{if(hover)move(true)}} onMouseLeave={()=>{if(hover)move(false)}} onFocus={()=>{if(hover)move(true)}} onBlur={()=>{if(hover)move(false)}}><span className="icon-art" ref={container}/><span className="icon-name">{titleOf(icon.id)}</span><span className="icon-english">{icon.title}</span></button>
+}
+export default function UseIconGallery({icons,animations,mode}){
+ const [query,setQuery]=useState(''),[version,setVersion]=useState(0),hover=mode==='hover';
+ const filtered=icons.filter(icon=>(titleOf(icon.id)+' '+icon.title+' '+icon.id).toLowerCase().includes(query.trim().toLowerCase()));
+ return <main className="icons-page"><header className="icons-heading"><div><span className="icons-kicker">USEANIMATIONS / SINGLE ICON</span><h1>{hover?'悬停':'点击切换'}<small>{icons.length} 个动态图标</small></h1><p>{hover?'悬停播放，移开反向恢复。也支持键盘聚焦，手机可点击。':'点击图标切换状态，再点一次恢复。也支持 Tab + Enter 操作。'}</p></div><button className="icons-reset" onClick={()=>setVersion(v=>v+1)}>全部重置</button></header><label className="icons-search"><span>搜索图标</span><input type="search" aria-label="搜索图标" placeholder="中文名称 / English name" value={query} onChange={e=>setQuery(e.target.value)}/><small>{filtered.length} / {icons.length}</small></label><section className="icons-grid" aria-label={hover?'悬停图标':'点击切换图标'}>{filtered.map(icon=><IconTile key={icon.id+'-'+version} icon={icon} data={animations[icon.id]} hover={hover}/>)}{!filtered.length&&<p className="icons-empty">没有找到匹配的图标</p>}</section><footer className="icons-footer"><span>原始 Lottie 动画 · 本地资源</span><a href={'https://useanimations.com/zh/interactions/'+mode} target="_blank" rel="noreferrer">来源：UseAnimations ↗</a></footer></main>
+}

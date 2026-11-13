@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>双层旋转轮播饼图 · 开发演示</title>
+    <link rel="stylesheet" href="src/chart.css" />
+    <style>
+      body {
+        margin: 0;
+        padding: 32px 16px;
+        background: #061321;
+      }
+      main {
+        max-width: 440px;
+        margin: 0 auto;
+      }
+      @media (max-width: 480px) {
+        body {
+          padding: 16px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="double-ring-carousel">
+        <div class="dc-header">
+          <span>网格服务人员构成<span class="dc-demo">示例数据</span></span
+          ><button class="dc-play" type="button" aria-label="暂停轮播">
+            暂停轮播
+          </button>
+        </div>
+        <div class="dc-figure">
+          <svg class="dc-chart" role="img" aria-label="双层环形轮播图"></svg>
+          <div class="dc-center">
+            <span class="dc-name">专职网格员</span
+            ><strong class="dc-number">331</strong
+            ><span class="dc-percent">68.39%</span>
+          </div>
+        </div>
+        <div class="dc-legend" aria-label="人员分类"></div>
+        <div class="dc-footer">
+          <span class="dc-status">每 2.5 秒切换</span><span>合计 484 人</span>
+        </div>
+        <span class="dc-announcement" role="status" aria-live="polite"></span>
+      </div>
+    </main>
+    <script src="src/chart.js"></script>
+  </body>
+</html>

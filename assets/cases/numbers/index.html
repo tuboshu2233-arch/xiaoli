@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Flip Counter · 数字翻牌</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <main class="stage">
+      <div class="panel">
+        <div class="digits" id="digits" aria-live="polite" aria-label="当前数值"></div>
+        <div class="slider-wrap">
+          <input type="range" id="slider" min="0" max="999" value="4" step="1" aria-label="调整数值" />
+        </div>
+      </div>
+      <p class="hint">拖动右侧滑块，数字以翻牌方式切换</p>
+    </main>
+    <script src="src/demo.js"></script>
+  </body>
+</html>

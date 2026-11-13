@@ -1,0 +1,12 @@
+[
+  {
+    "source": "/Users/liyiheng/Downloads/payment.gif",
+    "reference": "interaction-library/assets/cases/payment-pop/reference/payment.gif",
+    "sha256": "1f28561ad5edea35e0b46d0196592dac074c41212274abf195a5a3e54bb021ad"
+  },
+  {
+    "source": "/Users/liyiheng/Desktop/huaban-5594860161.gif",
+    "reference": "interaction-library/assets/cases/payment-orbit/reference/huaban-5594860161.gif",
+    "sha256": "091a07653a8dbb78d2add5866482f701f44ff1c2e822dfbe88fdb85b0b6501d8"
+  }
+]

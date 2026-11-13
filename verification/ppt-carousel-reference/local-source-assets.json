@@ -1,0 +1,134 @@
+[
+  {
+    "source": "image25.webp",
+    "frame": 0,
+    "crop": [
+      134,
+      45,
+      350,
+      167
+    ],
+    "output": "ppt-cover/images/sky.jpg"
+  },
+  {
+    "source": "image25.webp",
+    "frame": 17,
+    "crop": [
+      134,
+      45,
+      350,
+      167
+    ],
+    "output": "ppt-cover/images/clouds.jpg"
+  },
+  {
+    "source": "image25.webp",
+    "frame": 26,
+    "crop": [
+      134,
+      45,
+      350,
+      167
+    ],
+    "output": "ppt-cover/images/snow.jpg"
+  },
+  {
+    "source": "image24.webp",
+    "frame": 0,
+    "crop": [
+      200,
+      33,
+      537,
+      370
+    ],
+    "output": "ppt-carousel/images/noodles.jpg"
+  },
+  {
+    "source": "image24.webp",
+    "frame": 6,
+    "crop": [
+      200,
+      33,
+      537,
+      370
+    ],
+    "output": "ppt-carousel/images/restaurant.jpg"
+  },
+  {
+    "source": "image24.webp",
+    "frame": 12,
+    "crop": [
+      200,
+      33,
+      537,
+      370
+    ],
+    "output": "ppt-carousel/images/pancakes.jpg"
+  },
+  {
+    "source": "image24.webp",
+    "frame": 0,
+    "crop": [
+      30,
+      116,
+      200,
+      285
+    ],
+    "output": "ppt-carousel/images/seafood.jpg"
+  },
+  {
+    "source": "image24.webp",
+    "frame": 12,
+    "crop": [
+      538,
+      116,
+      707,
+      285
+    ],
+    "output": "ppt-carousel/images/mural.jpg"
+  },
+  {
+    "source": "image24.webp",
+    "frame": 0,
+    "crop": [
+      234,
+      376,
+      495,
+      421
+    ],
+    "output": "ppt-carousel/images/controls.png"
+  },
+  {
+    "source": "image23.webp",
+    "frame": 0,
+    "crop": [
+      0,
+      120,
+      582,
+      300
+    ],
+    "output": "ppt-mobile/images/sale.jpg"
+  },
+  {
+    "source": "image23.webp",
+    "frame": 6,
+    "crop": [
+      0,
+      120,
+      582,
+      300
+    ],
+    "output": "ppt-mobile/images/blue.jpg"
+  },
+  {
+    "source": "image23.webp",
+    "frame": 30,
+    "crop": [
+      0,
+      120,
+      582,
+      300
+    ],
+    "output": "ppt-mobile/images/home.jpg"
+  }
+]

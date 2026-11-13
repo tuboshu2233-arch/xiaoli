@@ -1,0 +1,14 @@
+[
+  {
+    "path": "vendor/src/shaders/neuform-isolated/sources/recursive-erosion.html",
+    "sha256": "2f407d6066583a2b1bb31e9c0ee10af75663b83fcd9c39f649e0800c028ee053",
+    "source": "https://threeui.com/assets/NeuformIsolatedEffects-D-O70sHB.js",
+    "purpose": "Sibling module dependency; not rendered in GalleryHeading"
+  },
+  {
+    "path": "vendor/src/shaders/neuform-isolated/sources/synthesis-orb.html",
+    "sha256": "4acc5f965c2c36ac93e0d37ed7e9ed8e32d2888c8662073c7076f75f84449a6d",
+    "source": "https://threeui.com/assets/NeuformIsolatedEffects-D-O70sHB.js",
+    "purpose": "Sibling module dependency; not rendered in GalleryHeading"
+  }
+]

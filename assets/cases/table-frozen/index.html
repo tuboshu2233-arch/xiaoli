@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>数据表格 · 固定列与批量操作</title>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <main class="stage">
+      <section class="panel">
+        <div class="topline">
+          <div class="tabs"><button type="button" class="active">我的应用</button><button type="button">未来活动</button></div>
+          <div class="views" aria-hidden="true"><span class="v active"></span><span class="v"></span><span class="v"></span></div>
+        </div>
+        <div class="toolbar">
+          <label class="search"><i></i><input type="search" placeholder="应用名称" aria-label="搜索应用" /></label>
+          <button type="button" class="select">周期 · 最近 7 天<span>⌄</span></button>
+          <button type="button" class="select">状态 · 全部<span>⌄</span></button>
+          <button type="button" class="plus" aria-label="新建">+</button>
+          <div class="manage-wrap">
+            <button type="button" class="link" id="manage" aria-expanded="false">管理列</button>
+            <div class="popover" id="popover" hidden></div>
+          </div>
+        </div>
+        <div class="batch" id="batch" hidden>
+          <span>已选 <b id="selected-count">0</b> 项</span>
+          <button type="button" data-batch="on">启用</button>
+          <button type="button" data-batch="off">暂停</button>
+          <button type="button" class="danger" data-batch="remove">删除</button>
+        </div>
+        <div class="scroll" id="scroll">
+          <table id="grid">
+            <thead>
+              <tr>
+                <th class="c-check sticky"><input type="checkbox" id="check-all" aria-label="全选" /></th>
+                <th class="c-status sticky">状态</th>
+                <th class="c-app sticky">应用</th>
+                <th data-sort="spend">花费 ↕</th>
+                <th data-sort="impressions">展示 ↕</th>
+                <th data-sort="taps">点击 ↕</th>
+                <th data-col="conversions">转化 ↕</th>
+                <th data-col="cpa">CPA ↕</th>
+                <th data-col="ttr">TTR ↕</th>
+                <th data-col="cr">CR ↕</th>
+                <th data-col="budget">预算 ↕</th>
+              </tr>
+            </thead>
+            <tbody id="rows"></tbody>
+            <tfoot>
+              <tr>
+                <td class="sticky"></td>
+                <td class="sticky"></td>
+                <td class="sticky">账户合计</td>
+                <td>$15,893.23</td>
+                <td>2,003,231</td>
+                <td>9,783</td>
+                <td data-col="conversions">2,208</td>
+                <td data-col="cpa">$1.05</td>
+                <td data-col="ttr">15.39%</td>
+                <td data-col="cr">3.21%</td>
+                <td data-col="budget">$98,932.00</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+      <p class="hint">左右滚动查看指标，前三列固定 · 勾选行显示批量操作 · 点击表头排序</p>
+    </main>
+    <script src="src/demo.js"></script>
+  </body>
+</html>

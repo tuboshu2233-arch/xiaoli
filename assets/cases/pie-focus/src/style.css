@@ -1,0 +1,75 @@
+@charset "UTF-8";
+:root {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #1a1a1a;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  gap: 14px;
+  background: radial-gradient(120% 70% at 50% 0%, #082033 0%, #031020 58%, #020b14 100%);
+  padding: 20px;
+}
+.stage {
+  width: min(470px, 94vw);
+  text-align: center;
+}
+.figure {
+  position: relative;
+  width: 100%;
+}
+svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.slice path {
+  transition: fill 0.36s ease, transform 0.36s cubic-bezier(0.3, 0.7, 0.3, 1), opacity 0.36s ease;
+  cursor: pointer;
+}
+.slice {
+  transition: transform 0.36s cubic-bezier(0.3, 0.7, 0.3, 1);
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.slice path:hover {
+  opacity: 0.9;
+}
+.readout {
+  position: absolute;
+  left: 50%;
+  bottom: 2%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 11px;
+  color: #5d7a92;
+  pointer-events: none;
+}
+.readout strong {
+  font-size: 13px;
+  font-weight: 550;
+  color: #e2edf4;
+}
+.readout span {
+  font-variant-numeric: tabular-nums;
+}
+.hint {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.8;
+  color: #5d7a92;
+}
+@media (prefers-reduced-motion: reduce) {
+  .slice,
+  .slice path {
+    transition: none;
+  }
+}
