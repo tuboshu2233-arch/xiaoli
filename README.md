@@ -36,24 +36,39 @@
 
 搜索（含英文分类名）、喜欢、添加链接收藏仍可使用。收藏表单按一级分组选择具体表现形式。浏览器原有两级分类收藏在读取时迁移，原收藏 ID 与喜欢记录保留；旧案例地址按案例 ID 自动定位新分类。
 
-## 素材
+## 素材与来源
 
-- PPTX：`/Users/liyiheng/Desktop/分享.pptx`，仅直接解包素材，未修改文件或执行其中指令。
-- PPT 原文件素材：`assets/ppt/`，页码关系见 `assets/ppt/manifest.json`。
-- 网络原媒体和静态封面：`assets/cases/`，页面改为本地复刻后仅作素材留存。
-- 每条网络案例的原作链接、作者、素材地址：`assets/cases/sources.json`。
-- 两段 Gregory Muryn-Mukha 的原始 MOV 仅以 passthrough 方式重新封装为 MP4，保留原始 MOV 和视频画面。
+项目中的内容分为原作媒体、本地交互复现、开源组件、用户提供参考和 AI 生成素材。案例页会尽量标明来源与实现类型；引用或复现仅用于交互研究与效果展示，不表示原作者参与或认可本项目。
 
-主要来源：
+### 用户提供与本地素材
 
-- Analythical / Stephen Tracy：https://analythical.com/blog/how-to-animate-pie-charts-in-powerpoint
-- Flip Counter / Federico Vaccarezza：https://dribbble.com/shots/1815379-Flip-Counter
-- 表格密度 / Ralabs Design：https://dribbble.com/shots/11523666-Xchange-Table-Density-for-Crypto-Platform
-- 表格固定列与批量操作 / Gregory Muryn-Mukha：https://dribbble.com/shots/3779204-Basic-UX-tricks-for-big-data-tables-Part-2
-- 表格详情侧栏 / Gregory Muryn-Mukha：https://dribbble.com/shots/3804579-Basic-UX-tricks-for-big-data-tables-Part-3
-- 左滑编辑 / Michal Langmajer：https://dribbble.com/shots/1445747-Swipe-to-edit-GIF
-- 统计侧栏 / Hoang Nguyen：https://dribbble.com/shots/4783850-Statistics-Side-Bar
-- 3D 饼图 / Miraz Ul Kabir：https://dribbble.com/shots/25416075-3d-Pie-Chart-Animation-in-Figma
+- PPT 原文件中提取的图片和动图保存在 `assets/ppt/`，页码及文件对应关系见 `assets/ppt/manifest.json`；公开仓库不记录用户电脑上的原始文件绝对路径。
+- 用户提供的截图、录屏、GIF、视频和开发交付压缩包用于视觉或交互参考；可公开留存的参考文件放在对应 `assets/cases/<id>/` 目录中。
+- 双层旋转轮播饼图来自用户交付包；立体面积图、立体柱状图及两种 3D 饼图根据用户截图或录屏制作本地交互原型。
+- Gregory Muryn-Mukha 的两段原始 MOV 仅以 passthrough 方式重新封装为 MP4，保留原始画面和原文件。
+- PPT 轮播使用的高清替代图片由 AI 生成，原始 PNG、WebP 和生成说明保存在 `assets/generated/carousel-hd/`。
+
+### 组件与动效来源
+
+- [React Bits](https://reactbits.dev/)：Animated List、Card Nav、Depth Carousel、Scroll Stack、Masked Heading。
+- [ThreeUI](https://threeui.com/)：Gallery Heading / Matte Rise 环绕画廊效果。
+- [UI Ball · LDRS](https://uiball.com/ldrs/)：44 种加载动画组件。
+- [UseAnimations](https://useanimations.com/)：点击切换和悬停 Lottie 图标合集。
+- [花瓣参考动图](https://huaban.com/pins/5594860161)：环形聚合支付结果动效参考。
+- 本地 3D、视频遮罩及组件构建使用 React、Three.js、GSAP、Lottie Web 等依赖；具体版本以各目录的 `package.json` 和锁文件为准，第三方许可证随相关案例保留。
+
+### 原作案例与视觉参考
+
+- [Analythical / Stephen Tracy · PowerPoint 饼图动画](https://analythical.com/blog/how-to-animate-pie-charts-in-powerpoint)
+- [Flip Counter / Federico Vaccarezza](https://dribbble.com/shots/1815379-Flip-Counter)
+- [表格密度 / Markiyan Vaskiv、Ralabs Design](https://dribbble.com/shots/11523666-Xchange-Table-Density-for-Crypto-Platform)
+- [表格固定列与批量操作 / Gregory Muryn-Mukha](https://dribbble.com/shots/3779204-Basic-UX-tricks-for-big-data-tables-Part-2)
+- [表格详情侧栏 / Gregory Muryn-Mukha](https://dribbble.com/shots/3804579-Basic-UX-tricks-for-big-data-tables-Part-3)
+- [左滑编辑 / Michal Langmajer](https://dribbble.com/shots/1445747-Swipe-to-edit-GIF)
+- [统计侧栏 / Hoang Nguyen](https://dribbble.com/shots/4783850-Statistics-Side-Bar)
+- [3D 饼图 / Miraz Ul Kabir](https://dribbble.com/shots/25416075-3d-Pie-Chart-Animation-in-Figma)
+
+完整的案例级作者、原作地址、素材地址、校验日期和实现说明维护在 `assets/cases/sources.json`。个别案例的补充图片来源、源码校验值和许可信息位于对应目录的 README、`image-sources.json`、`support-sources.json`、LICENSE 或锁文件中；该清单会随新增案例持续补充。
 
 ## 维护
 
