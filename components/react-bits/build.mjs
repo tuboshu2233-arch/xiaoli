@@ -18,3 +18,7 @@ for(const name of ['DepthCarousel','AnimatedList','ScrollStack','CardNav']){
 const names=['depth-carousel','animated-list','scroll-stack','card-nav','icon-click-toggle','icon-hover','loading-ldrs','payment-orbit','payment-pop'];
 await build({entryPoints:Object.fromEntries(names.map(name=>[`${name}/app.bundle`,resolve(cases,name,'src/main.jsx')])),outdir:cases,bundle:true,jsx:'automatic',minify:true,format:'iife',platform:'browser',target:['safari16','chrome110'],define:{'process.env.NODE_ENV':'"production"'},alias:{react:resolve(root,'node_modules/react'),'react-dom':resolve(root,'node_modules/react-dom'),'lottie-web':resolve(root,'node_modules/lottie-web')},legalComments:'linked',nodePaths:[resolve(root,'node_modules')]});
 console.log('Built',names.length,'collection previews.');
+await build({entryPoints:[resolve(cases,'pie3d-shared/main.js')],outfile:resolve(cases,'pie3d-shared/app.bundle.js'),bundle:true,minify:true,format:'iife',platform:'browser',target:['safari16','chrome110'],legalComments:'linked',nodePaths:[resolve(root,'node_modules')]});
+console.log('Built shared interactive 3D pie previews.');
+await build({entryPoints:[resolve(cases,'perspective-area/chart.js')],outfile:resolve(cases,'perspective-area/chart.bundle.js'),bundle:true,minify:true,format:'iife',platform:'browser',target:['safari16','chrome110'],legalComments:'linked',nodePaths:[resolve(root,'node_modules')]});
+console.log('Built shared orbit-controlled area/bar previews.');

@@ -9,7 +9,7 @@ const svg = document.getElementById('pie');
 const CX = 210;
 const CY = 210;
 const R = 168;
-const GAP = 1.6;
+const GAP = 4;
 
 function polar(radius, angle) {
   const rad = ((angle - 90) * Math.PI) / 180;
@@ -42,11 +42,14 @@ function render() {
 
   DATA.forEach((item, index) => {
     const sweep = (item.value / total) * 360;
-    const from = cursor + GAP / 2;
-    const to = cursor + sweep - GAP / 2;
+    const pad = Math.asin(GAP / 2 / R) * 180 / Math.PI;
+    const from = cursor + pad;
+    const to = cursor + sweep - pad;
     const [x0, y0] = polar(R, from);
     const [x1, y1] = polar(R, to);
     const largeArc = to - from > 180 ? 1 : 0;
+    // Intersection of the two offset radial edges: a straight, constant-width cut.
+    const [tipX, tipY] = polar(GAP / 2 / Math.sin(sweep * Math.PI / 360), cursor + sweep / 2);
 
     const group = document.createElementNS(NS, 'g');
     group.setAttribute('class', 'slice');
@@ -55,7 +58,7 @@ function render() {
     const path = document.createElementNS(NS, 'path');
     path.setAttribute(
       'd',
-      `M ${CX} ${CY} L ${x0.toFixed(2)} ${y0.toFixed(2)} A ${R} ${R} 0 ${largeArc} 1 ${x1.toFixed(2)} ${y1.toFixed(2)} Z`
+      `M ${tipX.toFixed(2)} ${tipY.toFixed(2)} L ${x0.toFixed(2)} ${y0.toFixed(2)} A ${R} ${R} 0 ${largeArc} 1 ${x1.toFixed(2)} ${y1.toFixed(2)} Z`
     );
     path.setAttribute('fill', `url(#pie-fill-${index})`);
     group.appendChild(path);

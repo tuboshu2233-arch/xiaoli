@@ -64,12 +64,18 @@
     return [c + r * Math.cos(a), c + r * Math.sin(a)];
   }
   function arc(inner, outer, a, b, c) {
-    const p = point(outer, a, c),
-      q = point(outer, b, c),
-      u = point(inner, b, c),
-      v = point(inner, a, c),
-      large = b - a > Math.PI ? 1 : 0;
-    return `M${p}A${outer},${outer} 0 ${large} 1 ${q}L${u}A${inner},${inner} 0 ${large} 0 ${v}Z`;
+    // Offset both edges by a fixed distance, not a fixed angle.
+    // Inner and outer endpoints lie on parallel straight cuts of equal width.
+    const halfGap = 1.5,
+      outerPad = Math.asin(halfGap / outer),
+      innerPad = Math.asin(halfGap / inner),
+      p = point(outer, a + outerPad, c),
+      q = point(outer, b - outerPad, c),
+      u = point(inner, b - innerPad, c),
+      v = point(inner, a + innerPad, c),
+      large = b - a - 2 * outerPad > Math.PI ? 1 : 0,
+      innerLarge = b - a - 2 * innerPad > Math.PI ? 1 : 0;
+    return `M${p}A${outer},${outer} 0 ${large} 1 ${q}L${u}A${inner},${inner} 0 ${innerLarge} 0 ${v}Z`;
   }
   function labelPath(r, a, b, c) {
     const mid = (a + b) / 2,
@@ -192,8 +198,7 @@
     svg.append(title);
     let a = -Math.PI / 2 - (Math.PI * data[0].value) / total;
     data.forEach((d, i) => {
-      const b = a + (Math.PI * 2 * d.value) / total,
-        gap = 0.025;
+      const b = a + (Math.PI * 2 * d.value) / total;
       const grad = node("linearGradient", {
         id: `dc-fill-${i}`,
         x1: "0%",
@@ -227,7 +232,7 @@
       tp.textContent = i === 3 ? "心理" : d.name;
       text.append(tp);
       svg.append(outer, main, text);
-      nodes.push({ main, outer, guide, text, a: a + gap, b: b - gap });
+      nodes.push({ main, outer, guide, text, a, b });
       a = b;
     });
     geometry();

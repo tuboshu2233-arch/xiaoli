@@ -1,6 +1,10 @@
+import { PerspectiveCamera, Vector3 } from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { contentViewport, fitCameraDistance, createViewProjection } from './orbit-view.mjs';
+
 (() => {
   'use strict';
-  const {DEFAULT_CAMERA,clamp,createScene,selectionMarkup,pickIndex}=AreaScene;
+  const {WORLD,DEFAULT_CAMERA,clamp,createScene,selectionMarkup,pickIndex}=AreaScene;
   const svg=document.querySelector('#chart'),plot=document.querySelector('#plot');
   const tooltip=document.querySelector('#tooltip'),dateLabel=document.querySelector('#tooltip-date');
   const tooltipValues=document.querySelector('#tooltip-values'),pinIndicator=document.querySelector('#pin-indicator');
@@ -20,12 +24,34 @@
   ];
   const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
   const defaultIndex=mode==='bar'?3:6;
-  const initialCamera=mode==='bar'?{yaw:0,pitch:.32}:DEFAULT_CAMERA;
-  let camera={...initialCamera},scene=null,selected=defaultIndex,pinned=false,hoverPosition=null;
+  const initialCamera=DEFAULT_CAMERA;
+  let scene=null,selected=defaultIndex,pinned=false,hoverPosition=null;
   let datasetIndex=0,touring=false,timer=null,drag=null,renderFrame=0,animationFrame=0;
+  const viewCamera=new PerspectiveCamera(35,1,.1,200);
+  const orbit=new OrbitControls(viewCamera,svg);
+  orbit.target.set(WORLD.width/2,WORLD.height/2,-WORLD.depth/2);
+  orbit.enableDamping=false;orbit.enablePan=false;orbit.enableZoom=false;orbit.rotateSpeed=.55;
+  orbit.minAzimuthAngle=-1.48;orbit.maxAzimuthAngle=1.48;
+  orbit.minPolarAngle=.25;orbit.maxPolarAngle=1.5;
+  let viewWidth=0,viewHeight=0,viewDistance=0;
+  const direction=new Vector3();
+  function sizeCamera(width,height,reset=false){
+    if(!reset&&width===viewWidth&&height===viewHeight)return;
+    const fresh=!viewWidth;
+    viewWidth=width;viewHeight=height;
+    const viewport=contentViewport(width,height);
+    viewCamera.aspect=viewport.width/viewport.height;
+    viewDistance=fitCameraDistance(WORLD,viewCamera.aspect,initialCamera.pitch,viewCamera.fov);
+    if(reset||fresh)direction.set(Math.sin(initialCamera.yaw)*Math.cos(initialCamera.pitch),Math.sin(initialCamera.pitch),Math.cos(initialCamera.yaw)*Math.cos(initialCamera.pitch));
+    else direction.copy(viewCamera.position).sub(orbit.target).normalize();
+    viewCamera.position.copy(orbit.target).addScaledVector(direction,viewDistance);
+    viewCamera.updateProjectionMatrix();orbit.update();
+  }
   function render(){
     const rect=plot.getBoundingClientRect();
-    scene=createScene({width:Math.max(rect.width,260),height:Math.max(rect.height,260),series,dates,camera,mode});
+    const width=Math.max(rect.width,260),height=Math.max(rect.height,260);
+    sizeCamera(width,height);
+    scene=createScene({width,height,series,dates,camera:createViewProjection(viewCamera,width,height),mode});
     svg.setAttribute('viewBox',`0 0 ${scene.width} ${scene.height}`);
     svg.innerHTML=scene.markup;
     updateSelection();
@@ -70,8 +96,6 @@
     if(drag){
       if(Math.hypot(event.clientX-drag.x,event.clientY-drag.y)>4)drag.moved=true;
       if(drag.moved){
-        camera.yaw=clamp(drag.yaw+(event.clientX-drag.x)/420,-.5,.5);
-        camera.pitch=clamp(drag.pitch-(event.clientY-drag.y)/440,.12,.75);
         svg.classList.add('dragging');requestRender();return;
       }
     }
@@ -80,7 +104,7 @@
   });
   svg.addEventListener('pointerdown',event=>{
     if(event.button!==0)return;
-    stopTour();drag={x:event.clientX,y:event.clientY,yaw:camera.yaw,pitch:camera.pitch,moved:false};
+    stopTour();drag={x:event.clientX,y:event.clientY,moved:false};
     svg.setPointerCapture(event.pointerId);
   });
   svg.addEventListener('pointerup',event=>{
@@ -88,6 +112,7 @@
     const moved=drag.moved;drag=null;svg.classList.remove('dragging');
     if(svg.hasPointerCapture(event.pointerId))svg.releasePointerCapture(event.pointerId);
     if(!moved){const point=localPoint(event);const next=nearest(point);pinned=!(pinned&&selected===next);selected=next;hoverPosition=point;speak();}
+    else{hoverPosition=null;if(!pinned)selected=null;}
     updateSelection();
   });
   svg.addEventListener('pointercancel',()=>{drag=null;svg.classList.remove('dragging');updateSelection()});
@@ -110,7 +135,7 @@
   }));
   tourButton.addEventListener('click',()=>{touring=!touring;pinned=false;hoverPosition=null;if(selected===null)selected=0;scheduleTour();updateSelection()});
   document.querySelector('#reset').addEventListener('click',()=>{
-    camera={...initialCamera};pinned=false;hoverPosition=null;drag=null;selected=defaultIndex;stopTour();render();
+    pinned=false;hoverPosition=null;drag=null;selected=defaultIndex;stopTour();sizeCamera(viewWidth,viewHeight,true);render();
     announcement.textContent='已恢复参考视角';
   });
   function updateTable(){
@@ -129,8 +154,10 @@
     tick(start);updateTable();announcement.textContent=`已切换为第${datasetIndex+1}组示例数据`;
   });
   document.addEventListener('visibilitychange',scheduleTour);
+  orbit.addEventListener('change',requestRender);
+  orbit.addEventListener('start',stopTour);
   reducedMotion.addEventListener('change',()=>{if(reducedMotion.matches){cancelAnimationFrame(animationFrame);series.forEach((s,i)=>s.values=[...datasets[datasetIndex][i]]);render()}});
   const observer=new ResizeObserver(requestRender);observer.observe(plot);
-  window.addEventListener('pagehide',()=>{clearInterval(timer);cancelAnimationFrame(animationFrame);cancelAnimationFrame(renderFrame);observer.disconnect()},{once:true});
+  window.addEventListener('pagehide',()=>{clearInterval(timer);cancelAnimationFrame(animationFrame);cancelAnimationFrame(renderFrame);observer.disconnect();orbit.dispose()},{once:true});
   updateTable();render();
 })();

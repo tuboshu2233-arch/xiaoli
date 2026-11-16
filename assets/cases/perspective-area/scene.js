@@ -2,8 +2,11 @@
 ((root,factory)=>{const api=factory();if(typeof module==='object'&&module.exports)module.exports=api;else root.AreaScene=api})(typeof globalThis!=='undefined'?globalThis:this,()=>{
   const WORLD={width:9,height:5.8,depth:2.1,max:30};
   const BAR_THICKNESS=.28,BAR_DEPTH=(WORLD.depth-BAR_THICKNESS)/2;
-  const BAR_WIDTH=.13,BAR_GAP=.05,BAR_OFFSET=(BAR_WIDTH+BAR_GAP)/2;
-  const DEFAULT_CAMERA={yaw:-.10,pitch:.32};
+  const ORIGINAL_BAR_WIDTH=.13,BAR_WIDTH=.155,BAR_GAP=.05,BAR_OFFSET=(BAR_WIDTH+BAR_GAP)/2;
+  // Use the spare outer margins to widen bars without shrinking either gap.
+  const barStep=count=>WORLD.width/count+2*(BAR_WIDTH-ORIGINAL_BAR_WIDTH);
+  const barXAt=(index,count)=>WORLD.width/2+(index-(count-1)/2)*barStep(count);
+  const DEFAULT_CAMERA={yaw:0,pitch:.32};
   const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
   const esc=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const f=v=>Number(v.toFixed(2));
@@ -19,6 +22,7 @@
     points.push({x:values.length-1,y:values.at(-1)});return points;
   }
   function makeProjector(width,height,camera=DEFAULT_CAMERA,baselineDepth=null){
+    if(typeof camera.projectWorld==='function')return (x,value,z)=>camera.projectWorld(x,value/WORLD.max*WORLD.height,z);
     const cy=Math.cos(camera.yaw),sy=Math.sin(camera.yaw),cp=Math.cos(camera.pitch),sp=Math.sin(camera.pitch);
     function cameraRaw(x,y,z){
       const xx=x-WORLD.width/2,zz=z-WORLD.depth/2;
@@ -43,9 +47,11 @@
   const line=points=>points.map((p,i)=>`${i?'L':'M'}${f(p.x)},${f(p.y)}`).join('');
   const polygon=(points,attrs)=>`<path d="${line(points)}Z" ${attrs}/>`;
   function createScene({width,height,series,dates,camera=DEFAULT_CAMERA,mode='area'}){
-    const project=makeProjector(width,height,camera,mode==='bar'?BAR_DEPTH:null),W=WORLD.width,D=WORLD.depth,M=WORLD.max;
+    // The browser supplies one shared orbit-camera projection for both modes.
+    // SVG-only callers can still use the numeric-camera fallback.
+    const project=makeProjector(width,height,camera,BAR_DEPTH),W=WORLD.width,D=WORLD.depth,M=WORLD.max;
     const p=(x,y,z)=>project(x,y,z),segments=dates.length-1;
-    const xAt=index=>mode==='bar'?(index+.5)/dates.length*W:index/segments*W;
+    const xAt=index=>mode==='bar'?barXAt(index,dates.length):index/segments*W;
     const path=(points,attrs)=>`<path d="${line(points)}" ${attrs}/>`;
     const ticks=[0,7.5,15,22.5,30];
     let markup=`<defs>
@@ -71,17 +77,19 @@
       if(width>=490||i%2===0||i===segments)markup+=`<text x="${label.x}" y="${label.y+22}" text-anchor="middle" fill="#b2c2cd" font-size="${width<500?9:11}">${esc(date)}</text>`;
     });
     markup+=`<text x="12" y="20" fill="#9cabb8" font-size="11">单位</text>`;
-    const anchors=[];
+    const anchors=[],barFaces=[];
     [...series].sort((a,b)=>b.z-a.z).filter(s=>s.visible).forEach(s=>{
       if(mode==='bar'){
         s.values.forEach((value,i)=>{
           const x=xAt(i)+(s.id===0?-BAR_OFFSET:BAR_OFFSET),half=BAR_WIDTH/2,z=BAR_DEPTH,back=z+BAR_THICKNESS;
           const a=p(x-half,0,z),b=p(x+half,0,z),c=p(x+half,value,z),d=p(x-half,value,z);
-          const bb=p(x+half,0,back),cc=p(x+half,value,back),dd=p(x-half,value,back);
+          const aa=p(x-half,0,back),bb=p(x+half,0,back),cc=p(x+half,value,back),dd=p(x-half,value,back);
           const cap=s.id===0?'#3b70ff':'#23efed';
-          markup+=polygon([a,b,c,d],`fill="url(#${s.key}-front)" stroke="${s.color}" stroke-opacity=".65" stroke-width=".7"`);
-          markup+=polygon([b,bb,cc,c],`fill="${cap}" fill-opacity=".4" stroke="${s.color}" stroke-opacity=".5" stroke-width=".6"`);
-          markup+=polygon([d,c,cc,dd],`fill="${cap}" fill-opacity=".96"`);
+          let faces=polygon([a,b,c,d],`fill="url(#${s.key}-front)" stroke="${s.color}" stroke-opacity=".65" stroke-width=".7"`);
+          const side=typeof camera.eyeX==='number'&&camera.eyeX<x?[aa,a,d,dd]:[b,bb,cc,c];
+          faces+=polygon(side,`fill="${cap}" fill-opacity=".4" stroke="${s.color}" stroke-opacity=".5" stroke-width=".6"`);
+          faces+=polygon([d,c,cc,dd],`fill="${cap}" fill-opacity=".96"`);
+          barFaces.push({faces,depth:camera.depthWorld?camera.depthWorld(x,value/WORLD.max*WORLD.height/2,z+BAR_THICKNESS/2):barFaces.length});
           const q=p(x,value,z+BAR_THICKNESS/2);anchors.push({...q,index:i,series:s.id,value,color:s.color,base:p(x,0,z)});
         });
         return;
@@ -101,25 +109,42 @@
         if(width>620)markup+=`<text x="${q.x}" y="${q.y+15}" text-anchor="middle" fill="#b1d2e7" fill-opacity=".4" font-size="8">${Number(v.toFixed(1))}</text>`;
       });
     });
+    if(mode==='bar')markup+=barFaces.sort((a,b)=>a.depth-b.depth).map(item=>item.faces).join('');
     markup+=path([p(0,M,0),p(0,0,0),p(W,0,0),p(W,0,D),p(W,M,D)],'fill="none" stroke="#7d96a6" stroke-opacity=".22" stroke-width="1"');
     markup+='</g><g id="selection" aria-hidden="true"></g>';
     return {markup,project,anchors,width,height,mode,interactionDepth:mode==='bar'?BAR_DEPTH+BAR_THICKNESS/2:0};
   }
   function selectionBounds(mode,index,count){
-    const step=WORLD.width/(mode==='bar'?count:count-1);
-    const center=mode==='bar'?(index+.5)*step:index*step;
+    const step=mode==='bar'?barStep(count):WORLD.width/(count-1);
+    const center=mode==='bar'?barXAt(index,count):index*step;
     return {center,left:Math.max(0,center-step/2),right:Math.min(WORLD.width,center+step/2)};
   }
   function pickIndex(scene,point,count){
-    // Use date regions at the series depth, not distances to bar tops.
-    // Otherwise tall neighboring bars can steal a short bar's hover selection.
-    function boundaryX(x){
-      const bottom=scene.project(x,0,scene.interactionDepth),top=scene.project(x,WORLD.max,scene.interactionDepth);
-      const t=clamp((point.y-bottom.y)/(top.y-bottom.y),0,1);
-      return bottom.x+(top.x-bottom.x)*t;
+    // Pick projected date regions, not bar tips or an assumed left-to-right
+    // screen order. Near-side orbit views can reverse that screen order.
+    function distanceToSegment(a,b){
+      const dx=b.x-a.x,dy=b.y-a.y;
+      const t=clamp(((point.x-a.x)*dx+(point.y-a.y)*dy)/(dx*dx+dy*dy||1),0,1);
+      return Math.hypot(point.x-a.x-t*dx,point.y-a.y-t*dy);
     }
-    for(let i=0;i<count-1;i++)if(point.x<boundaryX(selectionBounds(scene.mode,i,count).right))return i;
-    return count-1;
+    function contains(polygon){
+      let inside=false;
+      for(let i=0,j=polygon.length-1;i<polygon.length;j=i++){
+        const a=polygon[i],b=polygon[j];
+        if(distanceToSegment(a,b)<.015)return true;
+        if((a.y>point.y)!==(b.y>point.y)&&point.x<(b.x-a.x)*(point.y-a.y)/(b.y-a.y)+a.x)inside=!inside;
+      }
+      return inside;
+    }
+    let nearest=0,best=Infinity;
+    for(let i=0;i<count;i++){
+      const bounds=selectionBounds(scene.mode,i,count),p=scene.project,z=scene.interactionDepth;
+      const polygon=[p(bounds.left,0,z),p(bounds.right,0,z),p(bounds.right,WORLD.max,z),p(bounds.left,WORLD.max,z)];
+      if(contains(polygon))return i;
+      const distance=distanceToSegment(p(bounds.center,0,z),p(bounds.center,WORLD.max,z));
+      if(distance<best){best=distance;nearest=i;}
+    }
+    return nearest;
   }
   function selectionMarkup(scene,index,series,count){
     const bounds=selectionBounds(scene.mode,index,count),x=bounds.center,p=scene.project;

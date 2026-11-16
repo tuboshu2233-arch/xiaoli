@@ -34,6 +34,7 @@ svg {
   cursor: pointer;
 }
 .slice {
+  outline: none;
   transition: transform 0.36s cubic-bezier(0.3, 0.7, 0.3, 1);
   transform-box: fill-box;
   transform-origin: center;
@@ -41,24 +42,31 @@ svg {
 .slice path:hover {
   opacity: 0.9;
 }
+.slice:focus-visible { outline: none; }
+.slice:focus-visible path { stroke: #bcecff; stroke-width: 2; }
 .readout {
   position: absolute;
   left: 50%;
-  bottom: 2%;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  align-items: center;
   gap: 8px;
   font-size: 11px;
   color: #5d7a92;
   pointer-events: none;
 }
 .readout strong {
-  font-size: 13px;
+  font-size: clamp(14px, 3.5vw, 18px);
   font-weight: 550;
   color: #e2edf4;
 }
 .readout span {
+  font-size: clamp(28px, 7vw, 36px);
+  font-weight: 500;
+  line-height: 1.15;
+  color: #4b87ff;
   font-variant-numeric: tabular-nums;
 }
 .hint {

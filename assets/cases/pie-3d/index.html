@@ -4,22 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="color-scheme" content="dark" />
-    <title>3D 饼图 · 立体环形</title>
-    <link rel="stylesheet" href="src/style.css?v=2" />
+    <title>3D 饼图 · 点击增高</title>
+    <link rel="stylesheet" href="../pie3d-shared/style.css?v=8" />
   </head>
-  <body>
-    <main class="stage">
-      <header class="head">
-        <span class="eyebrow">3D CHART</span>
-        <h1>产品结构 · 立体环形</h1>
-        <p>拖拽旋转，松手后继续自转；悬停减速便于观察</p>
-      </header>
-      <div class="scene" id="scene">
-        <div class="halo"></div>
-        <div class="plate" id="plate"></div>
-      </div>
-      <ul class="legend" id="legend" aria-label="产品分类占比"></ul>
-    </main>
-    <script src="src/demo.js?v=2"></script>
+  <body data-variant="focus">
+    <main id="app"></main>
+    <script src="../pie3d-shared/app.bundle.js?v=15"></script>
   </body>
 </html>

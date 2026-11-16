@@ -32,11 +32,13 @@ const figure = document.getElementById('figure');
 const CX = 230;
 const CY = 230;
 const R = 186;
-const GAP = 1.4;
+const INNER_R = 110;
+const GAP = 4;
 const TOTAL = DATA.reduce((sum, item) => sum + item.value, 0);
 
 let active = 0;
 let timer = null;
+let hovered = false;
 
 function polar(radius, angle) {
   const rad = ((angle - 90) * Math.PI) / 180;
@@ -47,25 +49,42 @@ const slices = [];
 
 DATA.forEach((item, index) => {
   const start = DATA.slice(0, index).reduce((sum, entry) => sum + entry.value, 0);
-  const from = (start / TOTAL) * 360 - 90 + GAP / 2;
-  const to = ((start + item.value) / TOTAL) * 360 - 90 - GAP / 2;
+  const sweep = item.value / TOTAL * 360;
+  const boundary = start / TOTAL * 360 - 90;
+  const pad = Math.asin(GAP / 2 / R) * 180 / Math.PI;
+  const innerPad = Math.asin(GAP / 2 / INNER_R) * 180 / Math.PI;
+  const from = boundary + pad;
+  const to = boundary + sweep - pad;
   const [x0, y0] = polar(R, from);
   const [x1, y1] = polar(R, to);
   const largeArc = to - from > 180 ? 1 : 0;
+  const [innerEndX, innerEndY] = polar(INNER_R, boundary + sweep - innerPad);
+  const [innerStartX, innerStartY] = polar(INNER_R, boundary + innerPad);
+  const innerLargeArc = sweep - 2 * innerPad > 180 ? 1 : 0;
 
   const group = document.createElementNS(NS, 'g');
   group.setAttribute('class', 'slice');
+  group.setAttribute('role', 'button');
+  group.setAttribute('tabindex', '0');
+  group.setAttribute('aria-label', `${item.name}，占比${item.value}%`);
 
   const path = document.createElementNS(NS, 'path');
   path.setAttribute(
     'd',
-    `M ${CX} ${CY} L ${x0.toFixed(2)} ${y0.toFixed(2)} A ${R} ${R} 0 ${largeArc} 1 ${x1.toFixed(2)} ${y1.toFixed(2)} Z`
+    `M ${x0.toFixed(2)} ${y0.toFixed(2)} A ${R} ${R} 0 ${largeArc} 1 ${x1.toFixed(2)} ${y1.toFixed(2)} L ${innerEndX.toFixed(2)} ${innerEndY.toFixed(2)} A ${INNER_R} ${INNER_R} 0 ${innerLargeArc} 0 ${innerStartX.toFixed(2)} ${innerStartY.toFixed(2)} Z`
   );
   path.setAttribute('fill', `url(#idle-${index})`);
   group.appendChild(path);
   group.addEventListener('click', () => {
     setActive(index);
     restart();
+  });
+  group.addEventListener('keydown', event => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      setActive(index);
+      restart();
+    }
   });
   svg.appendChild(group);
   slices.push({ group, path, mid: (from + to) / 2 });
@@ -75,6 +94,7 @@ function setActive(index) {
   active = index;
   slices.forEach((slice, i) => {
     const focused = i === index;
+    slice.group.setAttribute('aria-pressed', String(focused));
     slice.path.setAttribute('fill', focused ? 'url(#focus-grad)' : `url(#idle-${i})`);
     if (focused) {
       const [dx, dy] = polar(10, slice.mid).map((value, axis) => value - (axis === 0 ? CX : CY));
@@ -85,10 +105,12 @@ function setActive(index) {
   });
   const item = DATA[index];
   readout.innerHTML = `<strong>${item.name}</strong><span>${item.value}%</span>`;
+  svg.setAttribute('aria-label', `环形图扇区聚焦，当前${item.name}，占比${item.value}%`);
 }
 
 function start() {
   stop();
+  if (hovered || figure.contains(document.activeElement)) return;
   timer = setInterval(() => setActive((active + 1) % DATA.length), 1600);
 }
 
@@ -102,8 +124,10 @@ function restart() {
   start();
 }
 
-figure.addEventListener('pointerenter', stop);
-figure.addEventListener('pointerleave', start);
+figure.addEventListener('pointerenter', () => { hovered = true; stop(); });
+figure.addEventListener('pointerleave', () => { hovered = false; start(); });
+figure.addEventListener('focusin', stop);
+figure.addEventListener('focusout', event => { if (!figure.contains(event.relatedTarget)) start(); });
 
 setActive(0);
 start();
