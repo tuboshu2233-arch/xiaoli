@@ -1,6 +1,13 @@
 # 拾动 · 交互案例收藏
 
-本地静态网站，使用 HTML、CSS、JavaScript；现有打包产物可直接预览，React 组件的构建命令见对应组件目录。
+使用 HTML、CSS、JavaScript 构建的交互案例收藏网站；现有打包产物可直接预览，React / Three.js 组件的构建命令见对应组件目录。项目已通过 GitHub Pages 公开发布。
+
+## 在线访问
+
+- 公网网站：https://tuboshu2233-arch.github.io/xiaoli/
+- GitHub 仓库：https://github.com/tuboshu2233-arch/xiaoli
+
+公网版本由仓库 `main` 分支发布，无需启动本地服务即可访问和分享。
 
 ## 本地预览
 
@@ -50,9 +57,11 @@
 
 ## 维护
 
-案例内容为 `app.js` 的 `seed` 数组；二级分类说明配置为 `taxonomy`，一级分组及顺序配置为 `navigationGroups`。样式在 `styles.css`，结构和收藏表单在 `index.html`。
+案例清单及元数据维护在 `app.js` 的 `seed` 数组中；二级分类说明配置为 `taxonomy`，一级分组及顺序配置为 `navigationGroups`。站点公共样式在 `styles.css`，页面结构和收藏表单在 `index.html`。各交互案例通常位于 `assets/cases/<id>/`，需要构建的案例请同时保留源码、构建产物、依赖锁文件及第三方许可证。
 
-当前仅在本地预览，未部署公网，未修改同工作区的述职网站。
+项目已部署至 GitHub Pages，公网地址为 https://tuboshu2233-arch.github.io/xiaoli/ 。本地修改完成并验证后，提交并推送到 GitHub 仓库的 `main` 分支，GitHub Pages 会自动更新；发布可能需要等待几分钟，必要时可通过更改查询参数或强制刷新绕过浏览器缓存。
+
+GitHub 仓库保存着已推送版本，因此本地工作目录意外丢失不会导致当前公网网站立即消失；但未提交、未推送的修改无法恢复。建议每次新增或调整案例后及时提交并推送。浏览器中的“喜欢”和手动收藏数据保存在当前设备的本地存储中，不会自动同步到 GitHub，也不会在不同浏览器或设备间共享。
 
 
 ## 立体面积图交互原型
